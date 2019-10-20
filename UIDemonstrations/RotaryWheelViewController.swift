@@ -12,6 +12,7 @@ class RotaryWheelViewController: UIViewController {
   var wheel : RotaryWheel? = nil
   var viewControllerItems : NSMutableArray = []
 
+  @IBOutlet weak var wheelView: UIView!
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -20,11 +21,25 @@ class RotaryWheelViewController: UIViewController {
     self.addWheel()
   }
   func addWheel() {
-    if(viewControllerItems == nil || viewControllerItems.count <= 0) {
+    if(viewControllerItems.count <= 0) {
       self.populateViewControllerArray();
     }
     wheel = RotaryWheel(frame: CGRect(x:0,y:0,width:300,height:300), del: self, sectionsNumber: 6, categories: viewControllerItems)
-
+    
+    wheel?.categoryWasClicked = { _ in
+      
+    }
+    self.wheelView.addSubview(wheel ?? UIView())
+//    wheel.categoryWasClicked = ^(CGFloat categoryId) {
+//      Category *c;
+//      c = [Category fetchById:categoryId fromContext:[AppDataRoomService sharedInstance].uiContext];
+//      [self pushCategory:c];
+//    };
+//    if(self.wheelView) {
+//      [self.wheelView addSubview:wheel];
+//    } else {
+//      [self.imageSplash addSubview:wheel];
+//    }
 //    if([SettingsManager boolForKey:@"addCategoryWheelToMainMenu"] && !hasAddedWheel && self.items && self.items.count > 0) {
 //       NSMutableArray *tempItems = [self.items mutableCopy];
 //       bool noFirst = true;
