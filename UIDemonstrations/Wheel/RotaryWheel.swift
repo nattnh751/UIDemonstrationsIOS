@@ -46,14 +46,19 @@ class RotaryWheel: UIControl,KCRotaryWheelProt {
   var pointsRunning: NSMutableArray?;
   var currentSector: Int? = 0;
   var hiddenSector: Int? = 1;
-  @objc func initWithFrame(frame:CGRect, del:Any, sectionsNumber:Int, categories:NSArray) -> Any {
-    self.frame = frame;
-    self.numberOfSections = sectionsNumber;
-    self.delegate = del as? RotaryWheelProtocol;
-    self.categoryList = categories;
-    self.drawWheel();
-    return self;
-  }
+   init(frame:CGRect, del:Any, sectionsNumber:Int, categories:NSArray) {
+      self.numberOfSections = sectionsNumber;
+      self.delegate = del as? RotaryWheelProtocol;
+      self.categoryList = categories;
+      super.init(frame:frame)
+      self.drawWheel();
+
+  //    return self;
+    }
+    
+    required init?(coder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+    }
   
   @objc func resetWheel() {
     for v in self.subviews {

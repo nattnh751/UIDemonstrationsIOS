@@ -23,7 +23,8 @@ class RotaryWheelViewController: UIViewController {
     if(viewControllerItems == nil || viewControllerItems.count <= 0) {
       self.populateViewControllerArray();
     }
-    
+    wheel = RotaryWheel(frame: CGRect(x:0,y:0,width:300,height:300), del: self, sectionsNumber: 6, categories: viewControllerItems)
+
 //    if([SettingsManager boolForKey:@"addCategoryWheelToMainMenu"] && !hasAddedWheel && self.items && self.items.count > 0) {
 //       NSMutableArray *tempItems = [self.items mutableCopy];
 //       bool noFirst = true;
