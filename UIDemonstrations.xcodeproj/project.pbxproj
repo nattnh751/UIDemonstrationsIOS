@@ -51,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				08AD9A6A235CB867007FB0C8 /* UIDemonstrations */,
+				08AD9A84235CB947007FB0C8 /* Wheel */,
 				08AD9A69235CB867007FB0C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				08AD9A6B235CB867007FB0C8 /* AppDelegate.swift */,
-				08AD9A84235CB947007FB0C8 /* Wheel */,
 				08AD9A6D235CB867007FB0C8 /* SceneDelegate.swift */,
 				08AD9A6F235CB867007FB0C8 /* RotaryWheelViewController.swift */,
 				08AD9A71235CB867007FB0C8 /* SecondViewController.swift */,
