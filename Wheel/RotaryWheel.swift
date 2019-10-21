@@ -19,7 +19,7 @@ class KCSector {
   var minValue :CGFloat?;
   var maxValue :CGFloat?;
   var midValue :CGFloat?;
-  var titleView :UILabelX?;
+  var titleView :CurvedLabel?;
   var imageView :UIImageView?;
   var categoryId :CGFloat?;
   var sector :Int?;
@@ -52,8 +52,6 @@ class RotaryWheel: UIControl,KCRotaryWheelProt {
       self.categoryList = categories;
       super.init(frame:frame)
       self.drawWheel();
-
-  //    return self;
     }
     
     required init?(coder: NSCoder) {
@@ -141,14 +139,17 @@ class RotaryWheel: UIControl,KCRotaryWheelProt {
       imageView.frame = CGRect(x:0,y:0,width:widthOfImageView,height:fanWidth);
       imageView.layer.position = CGPoint(x: (container?.bounds.size.width)!/2.0, y: (container?.bounds.size.height)!/2.0);
       imageView.contentMode = UIView.ContentMode.scaleAspectFit;
-      let curveLabel = UILabelX(frame: CGRect(x:constantForLabelX,y:constantForLabelY,width:constantForLabelWH,height: constantForLabelWH));
-//      if(self.categoryList != nil) {
+      let curveLabel = CurvedLabel(frame: CGRect(x:constantForLabelX,y:constantForLabelY,width:constantForLabelWH,height: constantForLabelWH));
+      if(self.categoryList != nil) {
 //        let cat = self.categoryList?.object(at: n) as! _Category;
 //        shownCategories!.add(cat);
 //        print("shown \(String(describing: cat.title))");
-//        curveLabel.text = cat.title.replacingOccurrences(of: "&", with: "\n&");
+        guard let itemString = self.categoryList?.object(at: n) as? String else {
+          return
+        }
+        curveLabel.text = itemString.replacingOccurrences(of: "&", with: "\n&");
 //        (sectors?.object(at: n) as! KCSector).categoryId = (cat.categoryId as! CGFloat);
-//      }
+      }
       curveLabel.angle = -140;
       curveLabel.maxWidthPerLine = constantForMaxWidthPerLine;
       curveLabel.clockwise = true;
@@ -158,7 +159,7 @@ class RotaryWheel: UIControl,KCRotaryWheelProt {
 //      paragraphStyle.lineSpacing = 5;
 //      let attrString = NSMutableAttributedString(string: curveLabel.text ?? "");
 //      attrString.addAttribute(.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length));
-//      curveLabel.attributedStringValue = attrString;
+//      curveLabel.attrString = attrString;
       (sectors?.object(at: n) as! KCSector).titleView = curveLabel;
       (sectors?.object(at: n) as! KCSector).imageView = imageView;
       imageView.addSubview(curveLabel);

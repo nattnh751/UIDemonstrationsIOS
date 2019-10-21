@@ -16,7 +16,7 @@
 		08AD9A7A235CB868007FB0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AD9A79235CB868007FB0C8 /* Assets.xcassets */; };
 		08AD9A7D235CB868007FB0C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AD9A7B235CB868007FB0C8 /* LaunchScreen.storyboard */; };
 		08AD9A87235CB991007FB0C8 /* RotaryWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9A85235CB991007FB0C8 /* RotaryWheel.swift */; };
-		08AD9A89235CBB48007FB0C8 /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9A88235CBB48007FB0C8 /* UILabelX.swift */; };
+		08AD9A89235CBB48007FB0C8 /* CurvedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9A88235CBB48007FB0C8 /* CurvedLabel.swift */; };
 		08AD9A8B235CBE4E007FB0C8 /* RotaryWheelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9A8A235CBE4E007FB0C8 /* RotaryWheelProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		08AD9A7C235CB868007FB0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08AD9A7E235CB868007FB0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08AD9A85235CB991007FB0C8 /* RotaryWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotaryWheel.swift; sourceTree = "<group>"; };
-		08AD9A88235CBB48007FB0C8 /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
+		08AD9A88235CBB48007FB0C8 /* CurvedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedLabel.swift; sourceTree = "<group>"; };
 		08AD9A8A235CBE4E007FB0C8 /* RotaryWheelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaryWheelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 		08AD9A84235CB947007FB0C8 /* Wheel */ = {
 			isa = PBXGroup;
 			children = (
-				08AD9A88235CBB48007FB0C8 /* UILabelX.swift */,
+				08AD9A88235CBB48007FB0C8 /* CurvedLabel.swift */,
 				08AD9A85235CB991007FB0C8 /* RotaryWheel.swift */,
 				08AD9A8A235CBE4E007FB0C8 /* RotaryWheelProtocol.swift */,
 			);
@@ -164,7 +164,7 @@
 				08AD9A72235CB867007FB0C8 /* SecondViewController.swift in Sources */,
 				08AD9A70235CB867007FB0C8 /* RotaryWheelViewController.swift in Sources */,
 				08AD9A87235CB991007FB0C8 /* RotaryWheel.swift in Sources */,
-				08AD9A89235CBB48007FB0C8 /* UILabelX.swift in Sources */,
+				08AD9A89235CBB48007FB0C8 /* CurvedLabel.swift in Sources */,
 				08AD9A8B235CBE4E007FB0C8 /* RotaryWheelProtocol.swift in Sources */,
 				08AD9A6C235CB867007FB0C8 /* AppDelegate.swift in Sources */,
 				08AD9A6E235CB867007FB0C8 /* SceneDelegate.swift in Sources */,
