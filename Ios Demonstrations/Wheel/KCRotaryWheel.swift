@@ -48,9 +48,9 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
   var hiddenSector: Int? = 1;
 
   
-  init(frame:CGRect, del:Any, sectionsNumber:Int, categories:NSArray) {
+  init(frame:CGRect, sectionsNumber:Int, categories:NSArray) {
     self.numberOfSections = sectionsNumber;
-    self.delegate = del as? KCRotaryProtocol;
+//    self.delegate = del as? KCRotaryProtocol;
     self.categoryList = categories;
     super.init(frame: frame)
     self.drawWheel();

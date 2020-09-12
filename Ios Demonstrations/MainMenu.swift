@@ -8,43 +8,34 @@
 
 import UIKit
 
-class MainMenu: UIViewController {
-  var wheel :KCRotaryWheel? = nil;
-
+class MainMenu: UIViewController, KCRotaryProtocol {
+  
+  var wheel :KCRotaryWheel;
+  @IBOutlet weak var wheelContainer: UIView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.refreshWheel()
   }
-
-  func refreshWheel() {
+  required init?(coder aDecoder: NSCoder) {
     var frame = CGRect(x: 0, y: 0, width: 600, height: 600)
     if(UI_USER_INTERFACE_IDIOM() == .phone) {
       frame = CGRect(x: 0, y: 35, width: 375, height: 375)
     }
-    if(wheel == nil) {
-      wheel = KCRotaryWheel(frame: frame, del: self, sectionsNumber: 6, categories: NSArray())
+    self.wheel = KCRotaryWheel(frame: frame, sectionsNumber: 6, categories: NSArray())
+    wheel.categoryWasClicked = { itemId in
+      // push the item
     }
-//    if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ){
-//      wheel = [[KCRotaryWheel new] initWithFrameWithFrame:CGRectMake(0, 35, 375, 375) del:self sectionsNumber:6 categories:[tempItems copy]];
-//      wheel.categoryWasClicked = ^(CGFloat categoryId) {
-//        Category *c;
-//        c = [Category fetchById:categoryId fromContext:[AppDataRoomService sharedInstance].uiContext];
-//        [self pushCategory:c];
-//      };
-//      [self.imageSplash addSubview:wheel];
-//    } else {
-//      wheel = [[KCRotaryWheel new] initWithFrameWithFrame:CGRectMake(0, 0, 600, 600) del:self sectionsNumber:6 categories:[tempItems copy]];
-//      wheel.categoryWasClicked = ^(CGFloat categoryId) {
-//        Category *c;
-//        c = [Category fetchById:categoryId fromContext:[AppDataRoomService sharedInstance].uiContext];
-//        [self pushCategory:c];
-//      };
-//      if(self.wheelView) {
-//        [self.wheelView addSubview:wheel];
-//      } else {
-//        [self.imageSplash addSubview:wheel];
-//      }
-//    }
+    super.init(coder: aDecoder)
+    wheel.delegate = self
+  }
+  func refreshWheel() {
+    if let container = self.wheelContainer {
+      container.addSubview(wheel)
+    }
+  }
+  func wheelDidChangeValue(_ newValue: String!) {
+    
   }
 }
 
