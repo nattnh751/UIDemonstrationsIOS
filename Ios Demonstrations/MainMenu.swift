@@ -19,7 +19,7 @@ class MainMenu: UIViewController, KCRotaryProtocol {
   }
   required init?(coder aDecoder: NSCoder) {
     var frame = CGRect(x: 0, y: 0, width: 600, height: 600)
-    if(UI_USER_INTERFACE_IDIOM() == .phone) {
+    if(UIDevice.current.userInterfaceIdiom == .phone) {
       frame = CGRect(x: 0, y: 35, width: 375, height: 375)
     }
     self.wheel = KCRotaryWheel(frame: frame, sectionsNumber: 6, categories: NSArray())
