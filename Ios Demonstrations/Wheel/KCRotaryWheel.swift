@@ -23,6 +23,7 @@ class KCSector {
   var imageView :UIImageView?;
   var categoryId :CGFloat?;
   var sector :Int?;
+  var id :Int?
 }
 
 class KCRotaryWheel: UIControl,KCRotaryWheelProt {
@@ -30,7 +31,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
   var container :UIView? = nil;
   var numberOfSections :Int? = 4;
   var isDragging :Bool = false;
-  @objc var categoryWasClicked: (_ categoryId: CGFloat) -> Void = {_ in };
+  @objc var categoryWasClicked: (_ itemId: CGFloat) -> Void = {_ in };
   static let widthOfImageViewPad: CGFloat = 280.0;
   static let widthOfBackgroundViewItemPad: CGFloat = 455.0;
   static let constantForRotatedImagePad: CGFloat = 193.0;
@@ -50,7 +51,6 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
   
   init(frame:CGRect, sectionsNumber:Int, categories:NSArray) {
     self.numberOfSections = sectionsNumber;
-//    self.delegate = del as? KCRotaryProtocol;
     self.categoryList = categories;
     super.init(frame: frame)
     self.drawWheel();
@@ -141,13 +141,12 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       imageView.layer.position = CGPoint(x: (container?.bounds.size.width)!/2.0, y: (container?.bounds.size.height)!/2.0);
       imageView.contentMode = UIView.ContentMode.scaleAspectFit;
       let curveLabel = UILabelX(frame: CGRect(x:constantForLabelX,y:constantForLabelY,width:constantForLabelWH,height: constantForLabelWH));
-//      if(self.categoryList != nil) {
-//        let cat = self.categoryList?.object(at: n) as! _Category;
-//        shownCategories!.add(cat);
-//        print("shown \(String(describing: cat.title))");
-//        curveLabel.text = cat.title.replacingOccurrences(of: "&", with: "\n&");
-//        (sectors?.object(at: n) as! KCSector).categoryId = (cat.categoryId as! CGFloat);
-//      }
+      if(self.categoryList != nil && self.categoryList!.count >= numberOfSects) {
+        let cat = self.categoryList?.object(at: n) as! WheelItem;
+        shownCategories!.add(cat);
+        curveLabel.text = cat.title?.replacingOccurrences(of: "&", with: "\n&");
+        (sectors?.object(at: n) as! KCSector).id = Int(cat.itemId);
+      }
       curveLabel.angle = -140;
       curveLabel.maxWidthPerLine = constantForMaxWidthPerLine;
       curveLabel.clockwise = true;
