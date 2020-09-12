@@ -17,6 +17,10 @@
 		08862E14250D396700384212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08862E12250D396700384212 /* LaunchScreen.storyboard */; };
 		08862E1F250D396800384212 /* Ios_DemonstrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E1E250D396800384212 /* Ios_DemonstrationsTests.swift */; };
 		08862E2A250D396800384212 /* Ios_DemonstrationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E29250D396800384212 /* Ios_DemonstrationsUITests.swift */; };
+		08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E39250D3CFC00384212 /* UILabelX.swift */; };
+		08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08862E3A250D3CFC00384212 /* CurvedLabel.m */; };
+		08862E3E250D3CFC00384212 /* KCRotaryWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E3B250D3CFC00384212 /* KCRotaryWheel.swift */; };
+		08862E45250D41CF00384212 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 08862E43250D41CF00384212 /* UIColor+hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		08862E25250D396800384212 /* Ios DemonstrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ios DemonstrationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08862E29250D396800384212 /* Ios_DemonstrationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ios_DemonstrationsUITests.swift; sourceTree = "<group>"; };
 		08862E2B250D396800384212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08862E38250D3CFC00384212 /* CurvedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurvedLabel.h; sourceTree = "<group>"; };
+		08862E39250D3CFC00384212 /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
+		08862E3A250D3CFC00384212 /* CurvedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurvedLabel.m; sourceTree = "<group>"; };
+		08862E3B250D3CFC00384212 /* KCRotaryWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCRotaryWheel.swift; sourceTree = "<group>"; };
+		08862E3F250D3DDD00384212 /* KCRotaryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRotaryProtocol.h; sourceTree = "<group>"; };
+		08862E41250D406400384212 /* SwiftBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftBridge.h; sourceTree = "<group>"; };
+		08862E43250D41CF00384212 /* UIColor+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
+		08862E44250D41CF00384212 /* UIColor+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 		08862DF6250D396400384212 = {
 			isa = PBXGroup;
 			children = (
+				08862E41250D406400384212 /* SwiftBridge.h */,
 				08862E01250D396400384212 /* Ios Demonstrations */,
 				08862E1D250D396800384212 /* Ios DemonstrationsTests */,
 				08862E28250D396800384212 /* Ios DemonstrationsUITests */,
@@ -107,6 +120,8 @@
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
 				08862E08250D396400384212 /* Settings.swift */,
+				08862E42250D41CF00384212 /* Resources */,
+				08862E37250D3CFC00384212 /* Wheel */,
 				08862E0A250D396400384212 /* Main.storyboard */,
 				08862E10250D396700384212 /* Assets.xcassets */,
 				08862E12250D396700384212 /* LaunchScreen.storyboard */,
@@ -132,6 +147,27 @@
 				08862E2B250D396800384212 /* Info.plist */,
 			);
 			path = "Ios DemonstrationsUITests";
+			sourceTree = "<group>";
+		};
+		08862E37250D3CFC00384212 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				08862E38250D3CFC00384212 /* CurvedLabel.h */,
+				08862E3F250D3DDD00384212 /* KCRotaryProtocol.h */,
+				08862E39250D3CFC00384212 /* UILabelX.swift */,
+				08862E3A250D3CFC00384212 /* CurvedLabel.m */,
+				08862E3B250D3CFC00384212 /* KCRotaryWheel.swift */,
+			);
+			path = Wheel;
+			sourceTree = "<group>";
+		};
+		08862E42250D41CF00384212 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08862E43250D41CF00384212 /* UIColor+hex.m */,
+				08862E44250D41CF00384212 /* UIColor+hex.h */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				08862E09250D396400384212 /* Settings.swift in Sources */,
+				08862E45250D41CF00384212 /* UIColor+hex.m in Sources */,
 				08862E0F250D396400384212 /* Ios_Demonstrations.xcdatamodeld in Sources */,
+				08862E3E250D3CFC00384212 /* KCRotaryWheel.swift in Sources */,
 				08862E07250D396400384212 /* MainMenu.swift in Sources */,
+				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,
+				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
 				08862E03250D396400384212 /* AppDelegate.swift in Sources */,
 				08862E05250D396400384212 /* SceneDelegate.swift in Sources */,
 			);
@@ -380,6 +420,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -433,6 +474,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
