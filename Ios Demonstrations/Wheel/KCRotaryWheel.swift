@@ -7,7 +7,10 @@
 
 import UIKit
 import Foundation
-
+struct WheelItem {//struct or class
+    var title: String
+    var itemId: Int
+}
 protocol KCRotaryWheelProt {
   func drawWheel()->();
   func calculateDistanceFromCenter(point: CGPoint) -> CGFloat;
@@ -31,7 +34,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
   var container :UIView? = nil;
   var numberOfSections :Int? = 4;
   var isDragging :Bool = false;
-  @objc var categoryWasClicked: (_ itemId: CGFloat) -> Void = {_ in };
+  @objc var categoryWasClicked: (_ itemId: Int) -> Void = {_ in };
   static let widthOfImageViewPad: CGFloat = 280.0;
   static let widthOfBackgroundViewItemPad: CGFloat = 455.0;
   static let constantForRotatedImagePad: CGFloat = 193.0;
@@ -144,7 +147,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       if(self.categoryList != nil && self.categoryList!.count >= numberOfSects) {
         let cat = self.categoryList?.object(at: n) as! WheelItem;
         shownCategories!.add(cat);
-        curveLabel.text = cat.title?.replacingOccurrences(of: "&", with: "\n&");
+        curveLabel.text = cat.title.replacingOccurrences(of: "&", with: "\n&");
         (sectors?.object(at: n) as! KCSector).id = Int(cat.itemId);
       }
       curveLabel.angle = -140;
@@ -164,13 +167,13 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       container?.addSubview(backgroundOfItem);
       
     }
-//    for category in self.categoryList! {
-//      let temp :_Category = category as! _Category;
-//      if(!(shownCategories?.contains(temp))!) {
-//        hiddenCategories!.add(temp);
-//        print("shown hidden \(String(describing: temp.title))");
-//      }
-//    }
+    for category in self.categoryList! {
+      let temp :WheelItem = category as! WheelItem;
+      if(!(shownCategories?.contains(temp))!) {
+        hiddenCategories!.add(temp);
+        print("shown hidden \(String(describing: temp.title))");
+      }
+    }
     container!.isUserInteractionEnabled = false;
     self.addSubview(container!);
   }
@@ -293,36 +296,33 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
     if(diodChange) {
       if(!clockwise) {
         print("counterclockwise");
-//        let catToAddToShown = hiddenCategories?.object(at:0) as! _Category;
-//        hiddenCategories?.remove(catToAddToShown);
-//        shownCategories?.add(catToAddToShown);
-//        for category in shownCategories! {
-//          let temp :_Category = category as! _Category;
-//          if((temp.categoryId as! CGFloat) == (sectors?.object(at: hiddenSector!) as! KCSector).categoryId) {
-//            shownCategories?.remove(temp);
-//            hiddenCategories?.add(temp);
-//          }
-//        }
-//        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
-//        (sectors?.object(at: hiddenSector!) as! KCSector).categoryId = (catToAddToShown.categoryId as! CGFloat);
+        let catToAddToShown = hiddenCategories?.object(at:0) as! WheelItem;
+        hiddenCategories?.remove(catToAddToShown);
+        shownCategories?.add(catToAddToShown);
+        for category in shownCategories! {
+          let temp :WheelItem = category as! WheelItem;
+          if(Int(temp.itemId)  == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
+            shownCategories?.remove(temp);
+            hiddenCategories?.add(temp);
+          }
+        }
+        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
+        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
       } else {
         print("clockwise");
-//        let catToAddToShown = hiddenCategories?.lastObject as! _Category;
-//        hiddenCategories?.remove(catToAddToShown);
-//        shownCategories?.add(catToAddToShown);
-//        for category in shownCategories! {
-//          let temp :_Category = category as! _Category;
-//          if((temp.categoryId as! CGFloat) == (sectors?.object(at: hiddenSector!) as! KCSector).categoryId) {
-//            shownCategories?.remove(temp);
-//            hiddenCategories?.insert(temp, at:0);
-//          }
-//        }
-//        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
-//        (sectors?.object(at: hiddenSector!) as! KCSector).categoryId = (catToAddToShown.categoryId as! CGFloat);
+        let catToAddToShown = hiddenCategories?.lastObject as! WheelItem;
+        hiddenCategories?.remove(catToAddToShown);
+        shownCategories?.add(catToAddToShown);
+        for category in shownCategories! {
+          let temp :WheelItem = category as! WheelItem;
+          if(Int(temp.itemId) == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
+            shownCategories?.remove(temp);
+            hiddenCategories?.insert(temp, at:0);
+          }
+        }
+        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
+        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
       }
-//      let cat = self.categoryList?.object(at: newIndex) as! _Category;
-//      (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = cat.title.replacingOccurrences(of: "&", with: "\n&");
-//      (sectors?.object(at: hiddenSector!) as! KCSector).categoryId = cat.categoryId as! CGFloat;
     }
   }
   
@@ -386,10 +386,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
     if(rad > -0.6638800102616383 && rad < 0.4835488715871063) {
@@ -399,11 +399,11 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
+          categoryWasClicked(temp.id!);
 //          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
-//        }
+        }
       }
     }
     if(rad > 0.6882390402897498 && rad < 1.4612492869283396) {
@@ -413,10 +413,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
     if(rad > 1.4612492869283396 && rad < 1.6993649747437054) {
@@ -426,10 +426,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
   }
@@ -443,11 +443,11 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
+          categoryWasClicked(temp.id!);
 //          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
-//        }
+        }
       }
     }
     if(rad > 0.049191053944986914 && rad < 1.1378557862241525) {
@@ -457,11 +457,11 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
+          categoryWasClicked(temp.id!);
 //          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
-//        }
+        }
       }
     }
     if(rad < 2.7647938866072486 && rad > 1.5401936388661779) {
@@ -471,10 +471,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
     if(rad > -1.3712999296995805 && rad < -0.8797812726119757) {
@@ -484,10 +484,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
     if(rad > 2.7647938866072486 || (rad > -3.1309320766486484 && rad < -2.4657898588319624)) {
@@ -497,10 +497,10 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       }
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
-//        if temp.sector == tester {
+        if temp.sector == tester {
 //          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-//          categoryWasClicked(temp.categoryId!);
-//        }
+          categoryWasClicked(temp.id!);
+        }
       }
     }
   }
