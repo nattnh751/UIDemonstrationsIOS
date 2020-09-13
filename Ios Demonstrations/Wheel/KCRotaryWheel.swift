@@ -387,7 +387,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red);
           categoryWasClicked(temp.id!);
         }
       }
@@ -400,7 +400,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red);
           categoryWasClicked(temp.id!);
 //          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
         }
@@ -414,7 +414,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red);
           categoryWasClicked(temp.id!);
         }
       }
@@ -427,7 +427,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red)
           categoryWasClicked(temp.id!);
         }
       }
@@ -444,9 +444,8 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red)
           categoryWasClicked(temp.id!);
-//          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
         }
       }
     }
@@ -458,9 +457,8 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red);
           categoryWasClicked(temp.id!);
-//          //            print("current sector name  + 1 \(String(describing: temp.titleView!.text))");
         }
       }
     }
@@ -472,7 +470,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red)
           categoryWasClicked(temp.id!);
         }
       }
@@ -485,8 +483,8 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
-          categoryWasClicked(temp.id!);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red)
+          categoryWasClicked(temp.id!)
         }
       }
     }
@@ -498,7 +496,7 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
       for sect in sectors! {
         let temp :KCSector = sect as! KCSector;
         if temp.sector == tester {
-//          temp.imageView?.image = temp.imageView?.image?.withTint(konecranesRed);
+          temp.imageView?.image = temp.imageView?.image?.withTintColor(konecranesRed ?? .red);
           categoryWasClicked(temp.id!);
         }
       }
