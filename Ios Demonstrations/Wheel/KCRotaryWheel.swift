@@ -293,37 +293,38 @@ class KCRotaryWheel: UIControl,KCRotaryWheelProt {
         }
       }
     }
-//    if(diodChange) {
-//      if(!clockwise) {
-//        print("counterclockwise");
-//        let catToAddToShown = hiddenCategories?.object(at:0) as! WheelItem;
-//        hiddenCategories?.remove(catToAddToShown);
-//        shownCategories?.add(catToAddToShown);
-//        for category in shownCategories! {
-//          let temp :WheelItem = category as! WheelItem;
-//          if(Int(temp.itemId)  == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
-//            shownCategories?.remove(temp);
-//            hiddenCategories?.add(temp);
-//          }
-//        }
-//        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
-//        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
-//      } else {
-//        print("clockwise");
-//        let catToAddToShown = hiddenCategories?.lastObject as! WheelItem;
-//        hiddenCategories?.remove(catToAddToShown);
-//        shownCategories?.add(catToAddToShown);
-//        for category in shownCategories! {
-//          let temp :WheelItem = category as! WheelItem;
-//          if(Int(temp.itemId) == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
-//            shownCategories?.remove(temp);
-//            hiddenCategories?.insert(temp, at:0);
-//          }
-//        }
-//        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
-//        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
-//      }
-//    }
+    let numberOfSects = numberOfSections ?? 4;
+    if(diodChange && (self.categoryList?.count  ?? numberOfSects > numberOfSects)) {
+      if(!clockwise) {
+        print("counterclockwise");
+        let catToAddToShown = hiddenCategories?.object(at:0) as! WheelItem;
+        hiddenCategories?.remove(catToAddToShown);
+        shownCategories?.add(catToAddToShown);
+        for category in shownCategories! {
+          let temp :WheelItem = category as! WheelItem;
+          if(Int(temp.itemId)  == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
+            shownCategories?.remove(temp);
+            hiddenCategories?.add(temp);
+          }
+        }
+        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
+        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
+      } else {
+        print("clockwise");
+        let catToAddToShown = hiddenCategories?.lastObject as! WheelItem;
+        hiddenCategories?.remove(catToAddToShown);
+        shownCategories?.add(catToAddToShown);
+        for category in shownCategories! {
+          let temp :WheelItem = category as! WheelItem;
+          if(Int(temp.itemId) == (sectors?.object(at: hiddenSector!) as! KCSector).id) {
+            shownCategories?.remove(temp);
+            hiddenCategories?.insert(temp, at:0);
+          }
+        }
+        (sectors?.object(at: hiddenSector!) as! KCSector).titleView!.text = catToAddToShown.title.replacingOccurrences(of: "&", with: "\n&");
+        (sectors?.object(at: hiddenSector!) as! KCSector).id = Int(catToAddToShown.itemId);
+      }
+    }
   }
   
   open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
