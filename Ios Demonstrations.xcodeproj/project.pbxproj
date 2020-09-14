@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083736CA251002F10057C87E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083736C9251002F10057C87E /* Search.swift */; };
 		08862E03250D396400384212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E02250D396400384212 /* AppDelegate.swift */; };
 		08862E05250D396400384212 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E04250D396400384212 /* SceneDelegate.swift */; };
 		08862E07250D396400384212 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E06250D396400384212 /* MainMenu.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083736C9251002F10057C87E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		08862DFF250D396400384212 /* Ios Demonstrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios Demonstrations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08862E02250D396400384212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08862E04250D396400384212 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083736C8251002DF0057C87E /* BeerSearch */ = {
+			isa = PBXGroup;
+			children = (
+				083736C9251002F10057C87E /* Search.swift */,
+			);
+			path = BeerSearch;
+			sourceTree = "<group>";
+		};
 		08862DF6250D396400384212 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
 				08862E08250D396400384212 /* Settings.swift */,
+				083736C8251002DF0057C87E /* BeerSearch */,
 				08862E42250D41CF00384212 /* Resources */,
 				08862E37250D3CFC00384212 /* Wheel */,
 				08862E0A250D396400384212 /* Main.storyboard */,
@@ -191,7 +202,6 @@
 				EE10EC4A882FC956EC238BBC /* Pods-Ios Demonstrations.debug.xcconfig */,
 				C636F44B54C398B9D0927911 /* Pods-Ios Demonstrations.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -377,6 +387,7 @@
 				08862E07250D396400384212 /* MainMenu.swift in Sources */,
 				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
+				083736CA251002F10057C87E /* Search.swift in Sources */,
 				08862E03250D396400384212 /* AppDelegate.swift in Sources */,
 				08862E05250D396400384212 /* SceneDelegate.swift in Sources */,
 			);
