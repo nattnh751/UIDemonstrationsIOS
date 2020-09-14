@@ -1,0 +1,4 @@
+target 'Ios Demonstrations' do
+	pod "RxSwift"
+	pod "RxCocoa"
+end
