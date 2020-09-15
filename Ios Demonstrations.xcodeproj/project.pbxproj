@@ -11,6 +11,10 @@
 		0867B51525101E2000A5109D /* SeachVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0867B51325101E2000A5109D /* SeachVC.xib */; };
 		0867B51A25110CD500A5109D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51825110CD500A5109D /* SearchCell.swift */; };
 		0867B51B25110CD500A5109D /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0867B51925110CD500A5109D /* SearchCell.xib */; };
+		0867B51D25112E5100A5109D /* githubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51C25112E5100A5109D /* githubEndpoint.swift */; };
+		0867B51F2511319300A5109D /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51E2511319300A5109D /* Issue.swift */; };
+		0867B521251131AC00A5109D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B520251131AC00A5109D /* Repository.swift */; };
+		0867B5232511320000A5109D /* IssueTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B5222511320000A5109D /* IssueTrackerModel.swift */; };
 		08862E03250D396400384212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E02250D396400384212 /* AppDelegate.swift */; };
 		08862E05250D396400384212 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E04250D396400384212 /* SceneDelegate.swift */; };
 		08862E07250D396400384212 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E06250D396400384212 /* MainMenu.swift */; };
@@ -50,6 +54,10 @@
 		0867B51325101E2000A5109D /* SeachVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachVC.xib; sourceTree = "<group>"; };
 		0867B51825110CD500A5109D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		0867B51925110CD500A5109D /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		0867B51C25112E5100A5109D /* githubEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubEndpoint.swift; sourceTree = "<group>"; };
+		0867B51E2511319300A5109D /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		0867B520251131AC00A5109D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		0867B5222511320000A5109D /* IssueTrackerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerModel.swift; sourceTree = "<group>"; };
 		08862DFF250D396400384212 /* Ios Demonstrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios Demonstrations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08862E02250D396400384212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08862E04250D396400384212 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +118,11 @@
 			children = (
 				0867B51225101E2000A5109D /* SeachVC.swift */,
 				0867B51325101E2000A5109D /* SeachVC.xib */,
+				0867B51C25112E5100A5109D /* githubEndpoint.swift */,
 				0867B51825110CD500A5109D /* SearchCell.swift */,
+				0867B51E2511319300A5109D /* Issue.swift */,
+				0867B5222511320000A5109D /* IssueTrackerModel.swift */,
+				0867B520251131AC00A5109D /* Repository.swift */,
 				0867B51925110CD500A5109D /* SearchCell.xib */,
 			);
 			path = BeerSearch;
@@ -394,8 +406,12 @@
 				08862E09250D396400384212 /* Settings.swift in Sources */,
 				0867B51A25110CD500A5109D /* SearchCell.swift in Sources */,
 				08862E45250D41CF00384212 /* UIColor+hex.m in Sources */,
+				0867B51F2511319300A5109D /* Issue.swift in Sources */,
+				0867B51D25112E5100A5109D /* githubEndpoint.swift in Sources */,
 				08862E0F250D396400384212 /* Ios_Demonstrations.xcdatamodeld in Sources */,
 				08862E3E250D3CFC00384212 /* KCRotaryWheel.swift in Sources */,
+				0867B5232511320000A5109D /* IssueTrackerModel.swift in Sources */,
+				0867B521251131AC00A5109D /* Repository.swift in Sources */,
 				08862E07250D396400384212 /* MainMenu.swift in Sources */,
 				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
