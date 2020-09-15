@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		083736CA251002F10057C87E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083736C9251002F10057C87E /* Search.swift */; };
+		0867B51425101E2000A5109D /* SeachVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51225101E2000A5109D /* SeachVC.swift */; };
+		0867B51525101E2000A5109D /* SeachVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0867B51325101E2000A5109D /* SeachVC.xib */; };
+		0867B51A25110CD500A5109D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51825110CD500A5109D /* SearchCell.swift */; };
+		0867B51B25110CD500A5109D /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0867B51925110CD500A5109D /* SearchCell.xib */; };
 		08862E03250D396400384212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E02250D396400384212 /* AppDelegate.swift */; };
 		08862E05250D396400384212 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E04250D396400384212 /* SceneDelegate.swift */; };
 		08862E07250D396400384212 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08862E06250D396400384212 /* MainMenu.swift */; };
@@ -43,7 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		083736C9251002F10057C87E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		0867B51225101E2000A5109D /* SeachVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachVC.swift; sourceTree = "<group>"; };
+		0867B51325101E2000A5109D /* SeachVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachVC.xib; sourceTree = "<group>"; };
+		0867B51825110CD500A5109D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		0867B51925110CD500A5109D /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		08862DFF250D396400384212 /* Ios Demonstrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios Demonstrations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08862E02250D396400384212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08862E04250D396400384212 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +108,10 @@
 		083736C8251002DF0057C87E /* BeerSearch */ = {
 			isa = PBXGroup;
 			children = (
-				083736C9251002F10057C87E /* Search.swift */,
+				0867B51225101E2000A5109D /* SeachVC.swift */,
+				0867B51325101E2000A5109D /* SeachVC.xib */,
+				0867B51825110CD500A5109D /* SearchCell.swift */,
+				0867B51925110CD500A5109D /* SearchCell.xib */,
 			);
 			path = BeerSearch;
 			sourceTree = "<group>";
@@ -311,7 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0867B51B25110CD500A5109D /* SearchCell.xib in Resources */,
 				08862E14250D396700384212 /* LaunchScreen.storyboard in Resources */,
+				0867B51525101E2000A5109D /* SeachVC.xib in Resources */,
 				08862E11250D396700384212 /* Assets.xcassets in Resources */,
 				08862E0C250D396400384212 /* Main.storyboard in Resources */,
 			);
@@ -381,13 +392,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08862E09250D396400384212 /* Settings.swift in Sources */,
+				0867B51A25110CD500A5109D /* SearchCell.swift in Sources */,
 				08862E45250D41CF00384212 /* UIColor+hex.m in Sources */,
 				08862E0F250D396400384212 /* Ios_Demonstrations.xcdatamodeld in Sources */,
 				08862E3E250D3CFC00384212 /* KCRotaryWheel.swift in Sources */,
 				08862E07250D396400384212 /* MainMenu.swift in Sources */,
 				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
-				083736CA251002F10057C87E /* Search.swift in Sources */,
+				0867B51425101E2000A5109D /* SeachVC.swift in Sources */,
 				08862E03250D396400384212 /* AppDelegate.swift in Sources */,
 				08862E05250D396400384212 /* SceneDelegate.swift in Sources */,
 			);

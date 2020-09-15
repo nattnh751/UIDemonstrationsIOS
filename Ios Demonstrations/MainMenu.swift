@@ -32,6 +32,10 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     wheel.delegate = self
     wheel.categoryWasClicked = { itemId in
       // push the item
+      if(itemId == 1) {
+        let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
+        self.present(searchVc, animated: true, completion: nil)
+      }
 //      self.wheel.resetWheel()
     }
   }
