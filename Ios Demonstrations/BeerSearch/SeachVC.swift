@@ -18,6 +18,8 @@ public class SeachVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     var provider: MoyaProvider<GitHub>!
+  var issueTrackerModel: IssueTrackerModel!
+
   var latestRepositoryName: Observable<String> {
         return searchBar
             .rx.text
@@ -34,7 +36,16 @@ public class SeachVC: UIViewController {
     }
   func setupRx() {
     provider = MoyaProvider()
-    
+    issueTrackerModel = IssueTrackerModel(provider: provider, repositoryName: latestRepositoryName)
+    issueTrackerModel
+               .trackIssues()
+                .bind(to: tableView.rx.items) { tableView, row, item in
+                   let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
+                   cell.textLabel?.text = item.title
+                   
+                   return cell
+               }
+              .disposed(by: disposeBag)
          // Here we tell table view that if user clicks on a cell,
          // and the keyboard is still visible, hide it
          tableView
