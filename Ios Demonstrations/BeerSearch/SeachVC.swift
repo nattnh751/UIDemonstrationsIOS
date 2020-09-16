@@ -9,39 +9,50 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Moya
+import Moya_ModelMapper
+import RxOptional
 
 public class SeachVC: UIViewController {
-
-   var shownCities = [String]() // Data source for UITableView
-    let allCities = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"] // Our mocked API data source
     let disposeBag = DisposeBag() // Bag of disposables to release them when view is being deallocated
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-  public override func viewDidLoad() {
-      super.viewDidLoad()
-      tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "beerCell")
-      tableView.dataSource = self
-      searchBar
-      .rx.text // Observable property thanks to RxCocoa
-      .orEmpty // Make it non-optional
-      .debounce(.milliseconds(500), scheduler: MainScheduler.instance) // Wait 0.5 for changes.
-      .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
-      .filter { !$0.isEmpty } // If the new value is really new, filter for non-empty query.
-      .subscribe(onNext: { [unowned self] query in // Here we will be notified of every new value
-          self.shownCities = self.allCities.filter { $0.hasPrefix(query) } // We now do our "API Request" to find cities.
-          self.tableView.reloadData() // And reload table view data.
-      }).disposed(by: disposeBag)
-    }
-}
+    var provider: MoyaProvider<BeerSearch>!
 
-extension SeachVC : UITableViewDelegate,UITableViewDataSource {
-  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return shownCities.count
+  var latestRepositoryName : Observable<String>  {
+    return searchBar
+        .rx.text
+        .orEmpty
+        .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+        .distinctUntilChanged()
   }
-  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath)
-         cell.textLabel?.text = shownCities[indexPath.row]
-         return cell
+  
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "beerCell")
+    setupRx()
+  }
+  
+  func setupRx() {
+    provider = MoyaProvider<BeerSearch>()
+    issueTrackerModel = IssueTrackerModel();
+    latestRepositoryName
+       .observeOn(MainScheduler.instance)
+       .flatMapLatest { name -> Observable<[Beer]> in
+         return self.provider.rx.request(BeerSearch.getBeer(name)).map(to: [Beer].self).asObservable()
+       }.bind(to: tableView.rx.items) { tableView, row, item in
+                                     let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
+                                     cell.textLabel?.text = item.name
+                                     return cell
+                                 }
+       .disposed(by: self.disposeBag)
+     tableView
+         .rx.itemSelected
+         .subscribe(onNext: { indexPath in
+             if self.searchBar.isFirstResponder == true {
+                 self.view.endEditing(true)
+             }
+         })
+      .disposed(by: disposeBag)
   }
 }
