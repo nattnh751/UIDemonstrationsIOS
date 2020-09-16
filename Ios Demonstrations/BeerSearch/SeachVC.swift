@@ -38,14 +38,13 @@ public class SeachVC: UIViewController {
     provider = MoyaProvider<BeerSearch>()
     issueTrackerModel = IssueTrackerModel();
     let result = issueTrackerModel.findBeer(query: "")
-    provider.rx.request(BeerSearch.getBeer("")).map(to: [Beer].self).subscribe { event in
-            switch event {
-            case .success(let user):
-                print(user)
-            case .error(let error):
-                print(error)
-            }
-    }
+    provider.rx.request(BeerSearch.getBeer("")).map(to: [Beer].self).asObservable().bind(to: tableView.rx.items) { tableView, row, item in
+                       let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
+                       cell.textLabel?.text = item.name
+    
+                       return cell
+                   }
+                  .disposed(by: disposeBag)
     
     
 //    observer.map { objects in
