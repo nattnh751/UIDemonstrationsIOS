@@ -24,15 +24,21 @@ extension BeerSearch: TargetType {
     var baseURL: URL { return URL(string: "https://api.punkapi.com/v2/")! }
     var method: Moya.Method { return .get }
     var headers: [String : String]? { return nil }
-    var task: Task { return .requestPlain }
-  
-//    var parameters: [String: Any]? {
-//         switch self {
-//
-//         case .getBeer(let query):
-//          return ["beer_name" : query]
-//         }
-//     }
+    var task: Task {
+      switch self {
+        case .getBeer(let query):
+            var params: [String: Any] = [:]
+            params["beer_name"] = query
+            if(query.count > 0) {
+              return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            } else {
+              return .requestPlain
+        }
+        default:
+            return .requestPlain
+        }
+      
+  }
   
     var path: String {
       return "beers"

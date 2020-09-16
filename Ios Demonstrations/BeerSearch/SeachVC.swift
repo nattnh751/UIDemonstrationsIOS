@@ -38,14 +38,27 @@ public class SeachVC: UIViewController {
     provider = MoyaProvider<BeerSearch>()
     issueTrackerModel = IssueTrackerModel();
     let result = issueTrackerModel.findBeer(query: "")
-    provider.rx.request(BeerSearch.getBeer("")).map(to: [Beer].self).asObservable().bind(to: tableView.rx.items) { tableView, row, item in
-                       let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
-                       cell.textLabel?.text = item.name
-    
-                       return cell
-                   }
-                  .disposed(by: disposeBag)
-    
+//    provider.rx.request(BeerSearch.getBeer("Movember")).map(to: [Beer].self).subscribe { event in
+//              switch event {
+//              case .success(let user):
+//                  print(user)
+//              case .error(let error):
+//                  print(error)
+//              }
+//      }
+
+    latestRepositoryName
+       .observeOn(MainScheduler.instance)
+       .flatMapLatest { name -> Observable<[Beer]> in
+           print("Name: \(name)")
+         return self.provider.rx.request(BeerSearch.getBeer(name)).map(to: [Beer].self).asObservable()
+       }.bind(to: tableView.rx.items) { tableView, row, item in
+                                     let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
+                                     cell.textLabel?.text = item.name
+
+                                     return cell
+                                 }
+       .disposed(by: self.disposeBag)
     
 //    observer.map { objects in
 //      print(objects)
