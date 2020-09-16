@@ -20,7 +20,7 @@ public class SeachVC: UIViewController {
     var provider: MoyaProvider<GitHub>!
   var issueTrackerModel: IssueTrackerModel!
 
-  var latestRepositoryName: Observable<String> {
+  var latestRepositoryName : Observable<String>  {
         return searchBar
             .rx.text
             .orEmpty
@@ -35,17 +35,28 @@ public class SeachVC: UIViewController {
 //      tableView.dataSource = self
     }
   func setupRx() {
-    provider = MoyaProvider()
-    issueTrackerModel = IssueTrackerModel(provider: provider, repositoryName: latestRepositoryName)
-    issueTrackerModel
-               .trackIssues()
-                .bind(to: tableView.rx.items) { tableView, row, item in
-                   let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
-                   cell.textLabel?.text = item.title
-                   
-                   return cell
-               }
-              .disposed(by: disposeBag)
+    provider = MoyaProvider<GitHub>()
+    issueTrackerModel = IssueTrackerModel();
+    let result = issueTrackerModel.findRepository(repository: "apple/swift")
+    result.subscribe(onSuccess: { (repo) in
+      print(repo)
+    }, onError: { error in
+        print(error.localizedDescription)
+    }).disposed(by: self.disposeBag)
+    
+    
+//    observer.map { objects in
+//      print(objects)
+//    }
+    //            print("Repository: \(repository.fullName)")
+    //            return self.findIssues(repository: repository)
+//      observer.bind(to: tableView.rx.items) { tableView, row, item in
+//                   let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
+//                   cell.textLabel?.text = item.fullName
+//
+//                   return cell
+//               }
+//              .disposed(by: disposeBag)
          // Here we tell table view that if user clicks on a cell,
          // and the keyboard is still visible, hide it
          tableView

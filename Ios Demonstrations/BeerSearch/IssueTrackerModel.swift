@@ -15,38 +15,40 @@ import RxSwift
  
 public struct IssueTrackerModel {
     
-  let provider: MoyaProvider<GitHub>
-  let repositoryName: Observable<String>
+  let provider = MoyaProvider<GitHub>()
+  private static let shared = IssueTrackerModel()
+  init() {}
 
-  internal func findIssues(repository: Repository) -> Observable<[Issue]> {
-    return self.provider
-    .rx
-    .request(GitHub.issues(repositoryFullName: repository.fullName))
-    .filterSuccessfulStatusCodes()
-    .debug()
-    .map(to: Issue.self).asObservable().toArray().asObservable()
+  internal func findIssues(repository: Repository) -> Single<[Issue]> {
+           return provider
+           .rx
+           .request(GitHub.issues(repositoryFullName: repository.fullName))
+           .filterSuccessfulStatusCodes()
+           .debug()
+            .map(to: [Issue].self)
+         
   }
   
-  internal func findRepository(repository: String) -> Observable<Repository> {
-    return self.provider
-    .rx
-    .request(GitHub.repo(fullName: repository))
-    .filterSuccessfulStatusCodes()
-    .debug()
-    .map(to: Repository.self).asObservable()
+  func findRepository(repository: String) -> Single<[Repository]> {
+        return provider
+          .rx
+           .request(GitHub.repo(fullName: repository))
+           .filterSuccessfulStatusCodes()
+           .debug()
+          .map(to: [Repository].self)
   }
-
-  func trackIssues() -> Observable<[Issue]> {
-    return repositoryName
-        .observeOn(MainScheduler.instance)
-        .flatMapLatest { name -> Observable<Repository> in
-            print("Name: \(name)")
-          return self.findRepository(repository: "apple/swift")
-        }
-        .flatMapLatest { repository -> Observable<[Issue]> in
-            print("Repository: \(repository.fullName)")
-            return self.findIssues(repository: repository)
-          
-      }.asObservable()
-  }
+  
+//  func trackIssues() -> Observable<[Issue]> {
+//    return repositoryName
+//        .observeOn(MainScheduler.instance)
+//        .flatMapLatest { name -> Observable<Repository> in
+//            print("Name: \(name)")
+//          return self.findRepository(repository: name)
+//        }
+//        .flatMapLatest { repository -> Observable<[Issue]> in
+//            print("Repository: \(repository.fullName)")
+//            return self.findIssues(repository: repository)
+//          
+//    }.catchErrorJustReturn([])
+//  }
 }

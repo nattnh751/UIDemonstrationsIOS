@@ -7,6 +7,7 @@ target 'Ios Demonstrations' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Moya-ModelMapper/RxSwift', '~> 10.0'
+  pod 'Moya/RxSwift', '~> 14.0'
   pod 'RxOptional'
 end
 

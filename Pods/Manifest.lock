@@ -29,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - Moya-ModelMapper/RxSwift (~> 10.0)
+  - Moya/RxSwift (~> 14.0)
   - RxCocoa
   - RxOptional
   - RxSwift
@@ -54,6 +55,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 845f433d258247122e7fb07737b2a3edff5c8553
+PODFILE CHECKSUM: 8add872fca6c7035ea925047cf272f6ff1fb5d74
 
 COCOAPODS: 1.9.3
