@@ -35,6 +35,11 @@
 		08AA0B562512804B0051775F /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B4D2512804B0051775F /* Method.swift */; };
 		08AA0B572512804B0051775F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B4E2512804B0051775F /* Ingredient.swift */; };
 		08AA0B582512804B0051775F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B4F2512804B0051775F /* Beer.swift */; };
+		08AA0B5D25128FBB0051775F /* DownloadableSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B5A25128FBB0051775F /* DownloadableSelectionView.m */; };
+		08AA0B5E25128FBB0051775F /* DownloadableSelectionMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AA0B5C25128FBB0051775F /* DownloadableSelectionMenu.xib */; };
+		08AA0B65251290220051775F /* TreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B5F251290220051775F /* TreeViewCell.m */; };
+		08AA0B66251290220051775F /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B62251290220051775F /* TreeNode.m */; };
+		08AA0B67251290220051775F /* TreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AA0B63251290220051775F /* TreeView.m */; };
 		E23FEBE09DE6C9B945A6EB24 /* Pods_Ios_Demonstrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A7EA1CA528560A9E39744A /* Pods_Ios_Demonstrations.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +99,15 @@
 		08AA0B4D2512804B0051775F /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		08AA0B4E2512804B0051775F /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		08AA0B4F2512804B0051775F /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		08AA0B5A25128FBB0051775F /* DownloadableSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadableSelectionView.m; sourceTree = "<group>"; };
+		08AA0B5B25128FBB0051775F /* DownloadableSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadableSelectionView.h; sourceTree = "<group>"; };
+		08AA0B5C25128FBB0051775F /* DownloadableSelectionMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadableSelectionMenu.xib; sourceTree = "<group>"; };
+		08AA0B5F251290220051775F /* TreeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewCell.m; sourceTree = "<group>"; };
+		08AA0B60251290220051775F /* TreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeView.h; sourceTree = "<group>"; };
+		08AA0B61251290220051775F /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		08AA0B62251290220051775F /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
+		08AA0B63251290220051775F /* TreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeView.m; sourceTree = "<group>"; };
+		08AA0B64251290220051775F /* TreeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewCell.h; sourceTree = "<group>"; };
 		C636F44B54C398B9D0927911 /* Pods-Ios Demonstrations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios Demonstrations.release.xcconfig"; path = "Target Support Files/Pods-Ios Demonstrations/Pods-Ios Demonstrations.release.xcconfig"; sourceTree = "<group>"; };
 		D1A7EA1CA528560A9E39744A /* Pods_Ios_Demonstrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_Demonstrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE10EC4A882FC956EC238BBC /* Pods-Ios Demonstrations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios Demonstrations.debug.xcconfig"; path = "Target Support Files/Pods-Ios Demonstrations/Pods-Ios Demonstrations.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				08862E02250D396400384212 /* AppDelegate.swift */,
+				08AA0B5925128FBB0051775F /* TwiddleDownScreen */,
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
 				08862E08250D396400384212 /* Settings.swift */,
@@ -233,6 +248,22 @@
 				08AA0B4F2512804B0051775F /* Beer.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		08AA0B5925128FBB0051775F /* TwiddleDownScreen */ = {
+			isa = PBXGroup;
+			children = (
+				08AA0B5A25128FBB0051775F /* DownloadableSelectionView.m */,
+				08AA0B61251290220051775F /* TreeNode.h */,
+				08AA0B62251290220051775F /* TreeNode.m */,
+				08AA0B60251290220051775F /* TreeView.h */,
+				08AA0B63251290220051775F /* TreeView.m */,
+				08AA0B64251290220051775F /* TreeViewCell.h */,
+				08AA0B5F251290220051775F /* TreeViewCell.m */,
+				08AA0B5B25128FBB0051775F /* DownloadableSelectionView.h */,
+				08AA0B5C25128FBB0051775F /* DownloadableSelectionMenu.xib */,
+			);
+			path = TwiddleDownScreen;
 			sourceTree = "<group>";
 		};
 		3ECF9AE0E28287EB9AAA1AB6 /* Frameworks */ = {
@@ -359,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0867B51B25110CD500A5109D /* SearchCell.xib in Resources */,
+				08AA0B5E25128FBB0051775F /* DownloadableSelectionMenu.xib in Resources */,
 				08862E14250D396700384212 /* LaunchScreen.storyboard in Resources */,
 				0867B51525101E2000A5109D /* SeachVC.xib in Resources */,
 				08862E11250D396700384212 /* Assets.xcassets in Resources */,
@@ -434,10 +466,14 @@
 				08862E45250D41CF00384212 /* UIColor+hex.m in Sources */,
 				08AA0B512512804B0051775F /* Amount.swift in Sources */,
 				0867B51D25112E5100A5109D /* BeerSearchEndpoint.swift in Sources */,
+				08AA0B67251290220051775F /* TreeView.m in Sources */,
+				08AA0B5D25128FBB0051775F /* DownloadableSelectionView.m in Sources */,
 				08862E0F250D396400384212 /* Ios_Demonstrations.xcdatamodeld in Sources */,
 				08862E3E250D3CFC00384212 /* KCRotaryWheel.swift in Sources */,
 				08862E07250D396400384212 /* MainMenu.swift in Sources */,
 				08AA0B532512804B0051775F /* MashTemp.swift in Sources */,
+				08AA0B65251290220051775F /* TreeViewCell.m in Sources */,
+				08AA0B66251290220051775F /* TreeNode.m in Sources */,
 				08AA0B542512804B0051775F /* BoilVolume.swift in Sources */,
 				08AA0B562512804B0051775F /* Method.swift in Sources */,
 				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,

@@ -51,6 +51,7 @@ public class SeachVC: UIViewController {
          .subscribe(onNext: { indexPath in
           beers.subscribe(onNext: { beers in
             let beer = beers[indexPath.row]
+            print(beer.name)
             if self.searchBar.isFirstResponder == true {
                 self.view.endEditing(true)
             }
