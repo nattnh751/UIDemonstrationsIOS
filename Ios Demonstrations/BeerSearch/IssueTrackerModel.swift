@@ -15,36 +15,12 @@ import RxSwift
  
 public struct IssueTrackerModel {
     
-  let provider = MoyaProvider<GitHub>()
+  let provider = MoyaProvider<BeerSearch>()
   private static let shared = IssueTrackerModel()
   init() {}
 
-//  internal func findIssues(repository: Repository) -> Single<[Issue]> {
-//           return provider
-//           .rx
-//            .request(GitHub.issues(repositoryFullName: "(repository.url?)!"))
-//           .filterSuccessfulStatusCodes()
-//           .debug()
-//            .map(to: [Issue].self)
-//         
-//  }
-//  
-  func findRepository(repository: String) -> Single<User> {
-    return provider.rx.request(GitHub.repo(repository)).map(to: User.self, keyPath: "owner")
+  func findBeer(query: String) -> Single<[Beer]> {
+    return provider.rx.request(BeerSearch.getBeer(query)).map(to: [Beer].self, keyPath: "owner")
 
   }
-//  
-//  func trackIssues() -> Observable<[Issue]> {
-//    return repositoryName
-//        .observeOn(MainScheduler.instance)
-//        .flatMapLatest { name -> Observable<Repository> in
-//            print("Name: \(name)")
-//          return self.findRepository(repository: name)
-//        }
-//        .flatMapLatest { repository -> Observable<[Issue]> in
-//            print("Repository: \(repository.fullName)")
-//            return self.findIssues(repository: repository)
-//          
-//    }.catchErrorJustReturn([])
-//  }
 }

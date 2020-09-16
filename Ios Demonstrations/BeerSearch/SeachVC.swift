@@ -17,7 +17,7 @@ public class SeachVC: UIViewController {
     let disposeBag = DisposeBag() // Bag of disposables to release them when view is being deallocated
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    var provider: MoyaProvider<GitHub>!
+    var provider: MoyaProvider<BeerSearch>!
   var issueTrackerModel: IssueTrackerModel!
 
   var latestRepositoryName : Observable<String>  {
@@ -35,10 +35,10 @@ public class SeachVC: UIViewController {
 //      tableView.dataSource = self
     }
   func setupRx() {
-    provider = MoyaProvider<GitHub>()
+    provider = MoyaProvider<BeerSearch>()
     issueTrackerModel = IssueTrackerModel();
-    let result = issueTrackerModel.findRepository(repository: "apple/swift")
-    result.subscribe { event in
+    let result = issueTrackerModel.findBeer(query: "")
+    provider.rx.request(BeerSearch.getBeer("")).map(to: [Beer].self).subscribe { event in
             switch event {
             case .success(let user):
                 print(user)
