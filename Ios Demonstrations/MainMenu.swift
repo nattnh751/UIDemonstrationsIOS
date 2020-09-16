@@ -22,7 +22,7 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     // This object list could easily replaced with a coredata fetch of an object, iterated over and insert with their titles and object ids.
     let objects = NSMutableArray()
     objects.add(WheelItem(title: "Search Demo", itemId: 1))
-    objects.add(WheelItem(title: "Beer Api", itemId: 2))
+    objects.add(WheelItem(title: "RX Brew Me Search", itemId: 2))
     objects.add(WheelItem(title: "Nested Categories", itemId: 3))
     objects.add(WheelItem(title: "Twiddle Down Screen", itemId: 4))
     objects.add(WheelItem(title: "Web Bundle Demo", itemId: 5))
@@ -32,7 +32,7 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     wheel.delegate = self
     wheel.categoryWasClicked = { itemId in
       // push the item
-      if(itemId == 1) {
+      if(itemId == 2) {
         let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
         self.present(searchVc, animated: true, completion: nil)
       }

@@ -35,12 +35,12 @@ public class SeachVC: UIViewController {
   
   func setupRx() {
     provider = MoyaProvider<BeerSearch>()
-    issueTrackerModel = IssueTrackerModel();
-    latestRepositoryName
-       .observeOn(MainScheduler.instance)
-       .flatMapLatest { name -> Observable<[Beer]> in
-         return self.provider.rx.request(BeerSearch.getBeer(name)).map(to: [Beer].self).asObservable()
-       }.bind(to: tableView.rx.items) { tableView, row, item in
+    let beers = latestRepositoryName
+    .observeOn(MainScheduler.instance)
+    .flatMapLatest { name -> Observable<[Beer]> in
+      return self.provider.rx.request(BeerSearch.getBeer(name)).map(to: [Beer].self).asObservable()
+    }
+    beers.bind(to: tableView.rx.items) { tableView, row, item in
                                      let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: IndexPath(row: row, section: 0))
                                      cell.textLabel?.text = item.name
                                      return cell
@@ -49,9 +49,12 @@ public class SeachVC: UIViewController {
      tableView
          .rx.itemSelected
          .subscribe(onNext: { indexPath in
-             if self.searchBar.isFirstResponder == true {
-                 self.view.endEditing(true)
-             }
+          beers.subscribe(onNext: { beers in
+            let beer = beers[indexPath.row]
+            if self.searchBar.isFirstResponder == true {
+                self.view.endEditing(true)
+            }
+          })
          })
       .disposed(by: disposeBag)
   }
