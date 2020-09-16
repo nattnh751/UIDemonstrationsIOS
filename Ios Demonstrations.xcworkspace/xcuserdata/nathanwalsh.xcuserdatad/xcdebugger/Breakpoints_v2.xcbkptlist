@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E53B2097-4D7C-4258-8E89-33CF6F72EA27"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E53B2097-4D7C-4258-8E89-33CF6F72EA27 - e81eb861dbd7f26b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ios_Demonstrations.SeachVC.setupRx() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/BeerSearch/SeachVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "1087">
-               </Location>
-               <Location
-                  uuid = "E53B2097-4D7C-4258-8E89-33CF6F72EA27 - 6a3794015e6b4308"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UITableView, Swift.Int, Ios_Demonstrations.Repository) -&gt; __C.UITableViewCell in Ios_Demonstrations.SeachVC.setupRx() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/BeerSearch/SeachVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "113">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EA8DA230-52EC-488F-BCA8-08B2E0D53D29"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +30,8 @@
             filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "latestRepositoryName"
             landmarkType = "24">
          </BreakpointContent>
@@ -103,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B2B35BF8-4B5B-45F5-9D09-87CCF23DF691"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A8AD873E-0237-4FE5-BB07-14E796CCA9E7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -126,72 +62,8 @@
             filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03709096-3BB6-433C-B9A1-C750F7D8FCDA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "03709096-3BB6-433C-B9A1-C750F7D8FCDA - e81eb861dbd7f26b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ios_Demonstrations.SeachVC.setupRx() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/BeerSearch/SeachVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "1030">
-               </Location>
-               <Location
-                  uuid = "03709096-3BB6-433C-B9A1-C750F7D8FCDA - d2591df8292b9a5a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Ios_Demonstrations.Repository&gt;) -&gt; Swift.Array&lt;Ios_Demonstrations.Repository&gt; in Ios_Demonstrations.SeachVC.setupRx() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/BeerSearch/SeachVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7FD53E89-3E8B-433F-8235-8DFD73A0D7A0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,42 +78,10 @@
             filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "latestRepositoryName"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8311D1E8-D781-44D4-93F3-06E7C7760198"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C5CAF9D5-815B-4867-A53E-9B0EB9F732D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/BeerSearch/SeachVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "setupRx()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
