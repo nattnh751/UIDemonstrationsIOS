@@ -38,11 +38,14 @@ public class SeachVC: UIViewController {
     provider = MoyaProvider<GitHub>()
     issueTrackerModel = IssueTrackerModel();
     let result = issueTrackerModel.findRepository(repository: "apple/swift")
-    result.subscribe(onSuccess: { (repo) in
-      print(repo)
-    }, onError: { error in
-        print(error.localizedDescription)
-    }).disposed(by: self.disposeBag)
+    result.subscribe { event in
+            switch event {
+            case .success(let user):
+                print(user)
+            case .error(let error):
+                print(error)
+            }
+    }
     
     
 //    observer.map { objects in

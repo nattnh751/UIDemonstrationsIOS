@@ -19,25 +19,21 @@ public struct IssueTrackerModel {
   private static let shared = IssueTrackerModel()
   init() {}
 
-  internal func findIssues(repository: Repository) -> Single<[Issue]> {
-           return provider
-           .rx
-           .request(GitHub.issues(repositoryFullName: repository.fullName))
-           .filterSuccessfulStatusCodes()
-           .debug()
-            .map(to: [Issue].self)
-         
+//  internal func findIssues(repository: Repository) -> Single<[Issue]> {
+//           return provider
+//           .rx
+//            .request(GitHub.issues(repositoryFullName: "(repository.url?)!"))
+//           .filterSuccessfulStatusCodes()
+//           .debug()
+//            .map(to: [Issue].self)
+//         
+//  }
+//  
+  func findRepository(repository: String) -> Single<User> {
+    return provider.rx.request(GitHub.repo(repository)).map(to: User.self, keyPath: "owner")
+
   }
-  
-  func findRepository(repository: String) -> Single<[Repository]> {
-        return provider
-          .rx
-           .request(GitHub.repo(fullName: repository))
-           .filterSuccessfulStatusCodes()
-           .debug()
-          .map(to: [Repository].self)
-  }
-  
+//  
 //  func trackIssues() -> Observable<[Issue]> {
 //    return repositoryName
 //        .observeOn(MainScheduler.instance)

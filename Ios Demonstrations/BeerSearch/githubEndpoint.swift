@@ -16,43 +16,42 @@ private extension String {
 }
 
 enum GitHub {
-    case userProfile(username: String)
-    case repos(username: String)
-    case repo(fullName: String)
-    case issues(repositoryFullName: String)
+    case zen
+    case userProfile(String)
+    case repos(String)
+    case repo(String)
 }
 
 extension GitHub: TargetType {
-  var headers: [String : String]? {
-    return ["Content-Type": "application/json"]
-  }
-  
-  var baseURL: URL { return URL(string: "https://api.github.com")! }
-  var path: String {
-      switch self {
-      case .repos(let name):
-          return "/users/\(name.URLEscapedString)/repos"
-      case .userProfile(let name):
-          return "/users/\(name.URLEscapedString)"
-      case .repo(let name):
-          return "/repos/\(name)"
-      case .issues(let repositoryName):
-          return "/repos/\(repositoryName)/issues"
-      }
-  }
-  var method: Moya.Method {
-      return .get
-  }
-  var parameters: [String: Any]? {
-      return nil
-  }
-  var sampleData: Data {
-      return Data()
-  }
-  var task: Task {
-    return .requestPlain
-  }
-  var parameterEncoding: ParameterEncoding {
-      return JSONEncoding.default
-  }
+
+    var baseURL: URL { return URL(string: "https://api.github.com")! }
+    var method: Moya.Method { return .get }
+    var headers: [String : String]? { return nil }
+    var task: Task { return .requestPlain }
+
+    var path: String {
+        switch self {
+        case .repos(let name):
+            return "/users/\(name.URLEscapedString)/repos"
+        case .zen:
+            return "/zen"
+        case .userProfile(let name):
+            return "/users/\(name.URLEscapedString)"
+        case .repo(let name):
+            return "/repos/\(name)"
+        }
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .repos(_):
+            return "{{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\"}}".data(using: String.Encoding.utf8)!
+        case .zen:
+            return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
+        case .userProfile(let name):
+            return "{\"login\": \"\(name)\", \"id\": 100}".data(using: String.Encoding.utf8)!
+        case .repo(_):
+            return "{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\", \"name\": \"Router\"}".data(using: String.Encoding.utf8)!
+        }
+    }
 }
