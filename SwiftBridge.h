@@ -12,5 +12,4 @@
 #import "CurvedLabel.h"
 #import "KCRotaryProtocol.h"
 #import "UIColor+hex.h"
-#import "DownloadableSelectionView.h"
 #endif /* SwiftBridge_h */

@@ -8,27 +8,27 @@ import Mapper
 
 struct Beer : Mappable{
 
-	var abv : Float?
-	var attenuationLevel : Int?
-	var boilVolume : BoilVolume?
-	var brewersTips : String?
-	var contributedBy : String?
-	var descriptionField : String?
-	var ebc : Int?
-	var firstBrewed : String?
-	var foodPairing : [String]?
-	var ibu : Int?
+	var abv : Float? //Main
+	var attenuationLevel : Int?// Brew tab
+	var boilVolume : BoilVolume?// Brew tab
+	var brewersTips : String?// Brew tab
+	var contributedBy : String?// Brew tab
+  var descriptionField : String? // Main
+	var ebc : Int?// Main
+	var firstBrewed : String?// Brew tab
+	var foodPairing : [String]? //Pair
+	var ibu : Int? // Main
 	var id : Int?
-	var imageUrl : String?
-	var ingredients : Ingredient?
-	var method : Method?
-	var name : String?
-	var ph : Float?
-	var srm : Int?
-	var tagline : String?
-	var targetFg : Int?
-	var targetOg : Int?
-	var volume : BoilVolume?
+	var imageUrl : String? // Main
+	var ingredients : Ingredient? // Brew tab
+	var method : Method? // Brew tab
+	var name : String? // Main
+	var ph : Float? // Main
+	var srm : Int? // Main
+	var tagline : String? // Main
+	var targetFg : Int?// Brew tab
+	var targetOg : Int?// Brew tab
+	var volume : BoilVolume?// Brew tab
   
   init(map: Mapper) throws {
       abv = map.optionalFrom("abv")
