@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeerViewer" customModule="Ios_Demonstrations" customModuleProvider="target">
             <connections>
-                <outlet property="beerDescription" destination="NOK-jT-slr" id="Ilz-V7-ujJ"/>
+                <outlet property="beerDescription" destination="NOK-jT-slr" id="uwR-iX-E7j"/>
                 <outlet property="beerImage" destination="4vw-pj-bFb" id="wjx-X8-PMM"/>
                 <outlet property="beerName" destination="Zf6-w2-J0T" id="655-QF-a0h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,7 +37,7 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a beer description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-jT-slr">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a beer description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-jT-slr">
                     <rect key="frame" x="20" y="433" width="374" height="58"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="UX7-q9-iAi"/>

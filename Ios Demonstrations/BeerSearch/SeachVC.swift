@@ -50,10 +50,12 @@ public class SeachVC: UIViewController {
          .rx.itemSelected
          .subscribe(onNext: { indexPath in
           beers.subscribe(onNext: { beers in
-            let beer = beers[indexPath.row]
-            print(beer.name)
-            if self.searchBar.isFirstResponder == true {
-                self.view.endEditing(true)
+            let thisBeer = beers[indexPath.row]
+            let beervc = BeerViewer(beer: thisBeer)
+            self.present(beervc, animated: true) {
+              if self.searchBar.isFirstResponder == true {
+                  self.view.endEditing(true)
+              }
             }
           })
          })

@@ -12,20 +12,24 @@ class BeerViewer: UIViewController {
   @IBOutlet weak var beerName: UILabel!
   @IBOutlet weak var beerImage: UIImageView!
   @IBOutlet weak var beerDescription: UILabel!
+  let beer : Beer?
   init(beer:Beer) {
+    self.beer = beer
     super.init(nibName: "BeerViewer", bundle: nil)
-    self.beerName.text = beer.name
-    let fileUrl = URL(string: beer.imageUrl ?? "")!
-    self.beerImage.load(url:fileUrl)
-    self.beerDescription.text = beer.descriptionField ?? ""
   }
   
   required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
+    self.beer = nil
+    super.init(coder: aDecoder)
   }
   override func viewDidLoad() {
-      super.viewDidLoad()
-        
+    super.viewDidLoad()
+    if let beerMe =  self.beer {
+      self.beerName.text = beerMe.name
+      let fileUrl = URL(string: beerMe.imageUrl ?? "")!
+      self.beerImage.load(url:fileUrl)
+      self.beerDescription.text = beerMe.descriptionField ?? ""
+    }
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
