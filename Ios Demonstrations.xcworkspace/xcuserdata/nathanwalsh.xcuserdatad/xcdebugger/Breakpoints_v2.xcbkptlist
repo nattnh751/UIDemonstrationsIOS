@@ -116,5 +116,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D1EAB0B-0236-4A29-AD71-3585EA5D30E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2D1EAB0B-0236-4A29-AD71-3585EA5D30E3 - 7245aa9e1dec6d8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AdvancedSearchViewController collectionView:didSelectItemAtIndexPath:]"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvancedSearchViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "1809">
+               </Location>
+               <Location
+                  uuid = "2D1EAB0B-0236-4A29-AD71-3585EA5D30E3 - 379b5478ffc1ffaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[AdvancedSearchViewController collectionView:didSelectItemAtIndexPath:]_block_invoke_2"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvancedSearchViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

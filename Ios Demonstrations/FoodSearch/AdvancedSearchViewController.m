@@ -52,18 +52,19 @@
   [super viewDidAppear:animated];
   NSArray *sortby = @[[NSSortDescriptor sortDescriptorWithKey:@"type"
                                                     ascending:YES]];
+  listOfSearchTags = [[SearchTag new] getAllSearchTags];
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                  ^{
-//                   for(SearchTag *tag in listOfSearchTags) {
-//                     if(tag.type && (![tag.aliases isKindOfClass:[NSArray class]] || ((NSArray *)tag.aliases).count <= 0)) {
-//                       if(![listOfSections containsObject:tag.type]) {
-//                           [listOfSections addObject:tag.type];
-//                           NSArray *sortby = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
-//                                                                             ascending:YES]];
-//                           [tagTypeDictionary setObject:[[SearchTag fetchByType:tag.type fromContext:[AppDataRoomService sharedInstance].uiContext]sortedArrayUsingDescriptors:sortby] forKey:tag.type];
-//                       }
-//                     }
-//                   }
+                   for(SearchTag *tag in listOfSearchTags) {
+                     if(tag.type) {
+                       if(![listOfSections containsObject:tag.type]) {
+                           [listOfSections addObject:tag.type];
+                           NSArray *sortby = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                                             ascending:YES]];
+                         [tagTypeDictionary setObject:[[SearchTag new] getAllSearchTagsForType:tag.type] forKey:tag.type];
+                       }
+                     }
+                   }
                    dispatch_async(dispatch_get_main_queue(), ^{
                      UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goBack:)];
                      tapGestureRecognizer.numberOfTapsRequired = 1;
@@ -223,7 +224,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         if(cell.tagID == tag.searchTagId) {
           typeof(mediaTagCell *) __weak weakSelf = cell;
           [UIView animateWithDuration:0.38f animations:^{
-            weakSelf.backgroundColor = [UIColor colorWithHexString:tag.color];
+            weakSelf.backgroundColor = tag.color;
             weakSelf.label.textColor = UIColor.whiteColor;
             weakSelf.alpha = 1.f;
             [cell layoutSubviews];
@@ -281,7 +282,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     [cell setTagID:tag.searchTagId];
     if(isSelectedView) {
       [cell.label setText:[NSString stringWithFormat:@"%@    x", tag.name]];
-      cell.backgroundColor = [UIColor colorWithHexString:tag.color];
+      cell.backgroundColor = tag.color;
       cell.layer.cornerRadius = (CGFloat) (14);
     } else {
       [cell.label setText:tag.name];
@@ -290,7 +291,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         cell.label.textColor = UIColor.darkGrayColor;
         cell.alpha = 0.4f;
       } else {
-        cell.backgroundColor = [UIColor colorWithHexString:tag.color];
+        cell.backgroundColor = tag.color;
         cell.label.textColor = UIColor.whiteColor;
         cell.alpha = 1.f;
       }
@@ -398,7 +399,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         typeof(mediaTagCell *) __weak weakSelf = cell;
         float randomNum = ((float)rand() / RAND_MAX) * 0.35;
         [UIView animateWithDuration:0.5 delay:randomNum options:nil animations:^{
-          weakSelf.backgroundColor = [UIColor colorWithHexString:tag.color];
+          weakSelf.backgroundColor = tag.color;
           weakSelf.label.textColor = UIColor.whiteColor;
           weakSelf.alpha = 1.f;
           [cell layoutSubviews];

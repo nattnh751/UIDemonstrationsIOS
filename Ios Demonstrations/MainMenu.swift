@@ -34,16 +34,15 @@ class MainMenu: UIViewController, KCRotaryProtocol {
       // push the item
       switch itemId {
       case 1:
-        print(itemId)
-        
+        let searchVc = AdvancedSearchViewController(nibName: "AdvancedSearchViewController", bundle: nil)
+        self.present(searchVc, animated: true, completion: nil)
       case 2:
         let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
         self.present(searchVc, animated: true, completion: nil)
       case 3:
         print(itemId)
       case 4:
-        let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
-        self.present(searchVc, animated: true, completion: nil)
+        print(itemId)
       case 5:
         print(itemId)
       case 6:
