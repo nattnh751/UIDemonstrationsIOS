@@ -33,9 +33,9 @@
   selectedTags = [NSMutableArray new];
   foodResultObjects = [NSMutableArray new];
 
-  [clearButton setTitle:@"Clear Search" forState:UIControlStateNormal];
+  [clearButton setTitle:@"Clear" forState:UIControlStateNormal];
   [searchButton setTitle:@"Search" forState:UIControlStateNormal];
-  [searchButton setTitle:@"Close Search" forState:UIControlStateSelected];
+  [searchButton setTitle:@"Close" forState:UIControlStateSelected];
   
 }
 

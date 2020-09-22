@@ -8,7 +8,7 @@
 
 import Foundation
 var dietDefinitions: [String] = ["Whole30", "Primal", "Paleo", "Pescetarian", "Vegan", "Ovo-Vegetarian", "Lacto-Vegetarian", "Vegetarian", "Ketogenic" ]
-var cusineDefinitions: [String] = ["African", "American", "British", "Cajun", "Caribbean", "Chinese", "European", "French", "German" ]
+var cusineDefinitions: [String] = ["African", "American", "British", "Cajun", "Caribbean", "Chinese", "European", "French", "German", "Greek", "Indian", "Irish", "Italian", "Jewish", "Korean","Latin American", "Mediterranean", "Mexican", "Middle Eastern", "Nordic", "Southern", "Spanish", "Thai","Vietnamese" ]
 var intoleranceDefintions: [String] = ["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy" ]
 
 
@@ -84,7 +84,7 @@ extension SearchTag {
         intoleranceTag.name = intolerance
         intoleranceTag.searchTagId = NSNumber(value: count)
         intoleranceTag.type = "Intolerance"
-        intoleranceTag.color = .green
+        intoleranceTag.color = .systemIndigo
         tags.append(intoleranceTag)
       }
     }
