@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		08624D4F251942E70050F5FC /* BeerViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08624D4D251942E70050F5FC /* BeerViewer.swift */; };
 		08624D50251942E70050F5FC /* BeerViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D4E251942E70050F5FC /* BeerViewer.xib */; };
+		08624D5F251A47C90050F5FC /* AdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */; };
+		08624D60251A47C90050F5FC /* AdvancedSearchSectionTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 08624D5A251A47C90050F5FC /* AdvancedSearchSectionTitle.m */; };
+		08624D61251A47C90050F5FC /* AdvancedSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D5B251A47C90050F5FC /* AdvancedSearchViewController.xib */; };
+		08624D62251A47C90050F5FC /* AdvancedSearchSectionTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D5C251A47C90050F5FC /* AdvancedSearchSectionTitle.xib */; };
+		08624D69251A48230050F5FC /* mediaTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D66251A48230050F5FC /* mediaTagCell.xib */; };
+		08624D6A251A48230050F5FC /* mediaTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08624D68251A48230050F5FC /* mediaTagCell.m */; };
+		08624D6F251A4A5B0050F5FC /* SearchTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08624D6E251A4A5B0050F5FC /* SearchTag.swift */; };
 		0867B51425101E2000A5109D /* SeachVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51225101E2000A5109D /* SeachVC.swift */; };
 		0867B51525101E2000A5109D /* SeachVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0867B51325101E2000A5109D /* SeachVC.xib */; };
 		0867B51A25110CD500A5109D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867B51825110CD500A5109D /* SearchCell.swift */; };
@@ -60,6 +67,16 @@
 /* Begin PBXFileReference section */
 		08624D4D251942E70050F5FC /* BeerViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewer.swift; sourceTree = "<group>"; };
 		08624D4E251942E70050F5FC /* BeerViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerViewer.xib; sourceTree = "<group>"; };
+		08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedSearchViewController.m; sourceTree = "<group>"; };
+		08624D5A251A47C90050F5FC /* AdvancedSearchSectionTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedSearchSectionTitle.m; sourceTree = "<group>"; };
+		08624D5B251A47C90050F5FC /* AdvancedSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedSearchViewController.xib; sourceTree = "<group>"; };
+		08624D5C251A47C90050F5FC /* AdvancedSearchSectionTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedSearchSectionTitle.xib; sourceTree = "<group>"; };
+		08624D5D251A47C90050F5FC /* AdvancedSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedSearchViewController.h; sourceTree = "<group>"; };
+		08624D5E251A47C90050F5FC /* AdvancedSearchSectionTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedSearchSectionTitle.h; sourceTree = "<group>"; };
+		08624D66251A48230050F5FC /* mediaTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mediaTagCell.xib; sourceTree = "<group>"; };
+		08624D67251A48230050F5FC /* mediaTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediaTagCell.h; sourceTree = "<group>"; };
+		08624D68251A48230050F5FC /* mediaTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediaTagCell.m; sourceTree = "<group>"; };
+		08624D6E251A4A5B0050F5FC /* SearchTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTag.swift; sourceTree = "<group>"; };
 		0867B51225101E2000A5109D /* SeachVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachVC.swift; sourceTree = "<group>"; };
 		0867B51325101E2000A5109D /* SeachVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachVC.xib; sourceTree = "<group>"; };
 		0867B51825110CD500A5109D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -144,6 +161,23 @@
 			path = BeerSearch;
 			sourceTree = "<group>";
 		};
+		08624D58251A47C90050F5FC /* FoodSearch */ = {
+			isa = PBXGroup;
+			children = (
+				08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */,
+				08624D5A251A47C90050F5FC /* AdvancedSearchSectionTitle.m */,
+				08624D5B251A47C90050F5FC /* AdvancedSearchViewController.xib */,
+				08624D5C251A47C90050F5FC /* AdvancedSearchSectionTitle.xib */,
+				08624D67251A48230050F5FC /* mediaTagCell.h */,
+				08624D68251A48230050F5FC /* mediaTagCell.m */,
+				08624D6E251A4A5B0050F5FC /* SearchTag.swift */,
+				08624D66251A48230050F5FC /* mediaTagCell.xib */,
+				08624D5D251A47C90050F5FC /* AdvancedSearchViewController.h */,
+				08624D5E251A47C90050F5FC /* AdvancedSearchSectionTitle.h */,
+			);
+			path = FoodSearch;
+			sourceTree = "<group>";
+		};
 		08862DF6250D396400384212 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +207,7 @@
 				08862E02250D396400384212 /* AppDelegate.swift */,
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
+				08624D58251A47C90050F5FC /* FoodSearch */,
 				08862E08250D396400384212 /* Settings.swift */,
 				083736C8251002DF0057C87E /* BeerSearch */,
 				08862E42250D41CF00384212 /* Resources */,
@@ -366,7 +401,10 @@
 			files = (
 				0867B51B25110CD500A5109D /* SearchCell.xib in Resources */,
 				08862E14250D396700384212 /* LaunchScreen.storyboard in Resources */,
+				08624D62251A47C90050F5FC /* AdvancedSearchSectionTitle.xib in Resources */,
+				08624D69251A48230050F5FC /* mediaTagCell.xib in Resources */,
 				0867B51525101E2000A5109D /* SeachVC.xib in Resources */,
+				08624D61251A47C90050F5FC /* AdvancedSearchViewController.xib in Resources */,
 				08624D50251942E70050F5FC /* BeerViewer.xib in Resources */,
 				08862E11250D396700384212 /* Assets.xcassets in Resources */,
 				08862E0C250D396400384212 /* Main.storyboard in Resources */,
@@ -438,6 +476,7 @@
 			files = (
 				08862E09250D396400384212 /* Settings.swift in Sources */,
 				0867B51A25110CD500A5109D /* SearchCell.swift in Sources */,
+				08624D60251A47C90050F5FC /* AdvancedSearchSectionTitle.m in Sources */,
 				08862E45250D41CF00384212 /* UIColor+hex.m in Sources */,
 				08624D4F251942E70050F5FC /* BeerViewer.swift in Sources */,
 				08AA0B512512804B0051775F /* Amount.swift in Sources */,
@@ -453,9 +492,12 @@
 				08AA0B552512804B0051775F /* Malt.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
 				08AA0B502512804B0051775F /* Hop.swift in Sources */,
+				08624D5F251A47C90050F5FC /* AdvancedSearchViewController.m in Sources */,
+				08624D6A251A48230050F5FC /* mediaTagCell.m in Sources */,
 				0867B51425101E2000A5109D /* SeachVC.swift in Sources */,
 				08862E03250D396400384212 /* AppDelegate.swift in Sources */,
 				08862E05250D396400384212 /* SceneDelegate.swift in Sources */,
+				08624D6F251A4A5B0050F5FC /* SearchTag.swift in Sources */,
 				08AA0B582512804B0051775F /* Beer.swift in Sources */,
 				08AA0B522512804B0051775F /* Fermentation.swift in Sources */,
 			);

@@ -12,4 +12,5 @@
 #import "CurvedLabel.h"
 #import "KCRotaryProtocol.h"
 #import "UIColor+hex.h"
+#import "AdvancedSearchViewcontroller.h"
 #endif /* SwiftBridge_h */

@@ -35,6 +35,7 @@ class MainMenu: UIViewController, KCRotaryProtocol {
       switch itemId {
       case 1:
         print(itemId)
+        
       case 2:
         let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
         self.present(searchVc, animated: true, completion: nil)
