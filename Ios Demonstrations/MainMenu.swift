@@ -12,13 +12,12 @@ class MainMenu: UIViewController, KCRotaryProtocol {
   
   var wheel :KCRotaryWheel;
   @IBOutlet weak var wheelContainer: UIView!
-  
+  var background : circleView
   required init?(coder aDecoder: NSCoder) {
     var frame = CGRect(x: 0, y: 0, width: 600, height: 600)
     if(UIDevice.current.userInterfaceIdiom == .phone) {
       frame = CGRect(x: 0, y: 35, width: 375, height: 375)
     }
-    
     // This object list could easily replaced with a coredata fetch of an object, iterated over and insert with their titles and object ids.
     let objects = NSMutableArray()
     objects.add(WheelItem(title: "Search Demo", itemId: 1))
@@ -28,6 +27,7 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     objects.add(WheelItem(title: "Web Bundle Demo", itemId: 5))
     objects.add(WheelItem(title: "Something else", itemId: 6))
     self.wheel = KCRotaryWheel(frame: frame, sectionsNumber: 6, categories: objects)
+    self.background = circleView()
     super.init(coder: aDecoder)
     wheel.delegate = self
     wheel.categoryWasClicked = { itemId in
@@ -58,8 +58,21 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     self.refreshWheel()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    self.background.setNeedsLayout()
+  }
+
   func refreshWheel() {
     if let container = self.wheelContainer {
+      self.background.frame = self.view.frame
+      self.view.addSubview(background)
+      self.view.sendSubviewToBack(background)
+      background.autoresizingMask = [.flexibleWidth, .flexibleHeight]
       container.addSubview(wheel)
     }
   }

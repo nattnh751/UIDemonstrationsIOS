@@ -73,6 +73,7 @@
                      [self initializeSelectedTagCollectionView];
                      [self initializeResultsCollectionView];
                      [self initializeTagCollectionView];
+                     [self setupRx];
                    });
                  });
 }
@@ -83,10 +84,8 @@
   [resultsCollectionView setHidden:NO];
   [resultsCollectionView setAlpha:0];
   [resultsCollectionView setBackgroundColor:[UIColor whiteColor]];
-//  [resultsCollectionView registerClass:[MediaItemCell class] forCellWithReuseIdentifier:@"*"];
-  [resultsCollectionView setDelegate:self];
+  [resultsCollectionView registerClass:[SearchCollectionViewCell class] forCellWithReuseIdentifier:@"*"];
   [resultsCollectionView setFrame:frame];
-  [resultsCollectionView setDataSource:self];
   noResultsFound = [UITextView new];
   noResultsFound.text = @"Search results empty";
   noResultsFound.userInteractionEnabled = NO;
@@ -149,7 +148,8 @@
   } else {
     [noResultsFound setHidden:YES];
   }
-  [resultsCollectionView reloadData];
+  [self executeSearch];
+  
 }
 
 -(void)presentOfflinePopup {
