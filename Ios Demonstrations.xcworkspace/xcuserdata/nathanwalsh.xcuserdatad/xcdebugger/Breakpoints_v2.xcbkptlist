@@ -190,8 +190,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,9 +222,9 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "setupRx()"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "executeSearch()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -238,8 +238,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "setupRx()"
             landmarkType = "7">
             <Locations>
@@ -301,8 +301,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
@@ -317,8 +317,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
@@ -333,8 +333,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
@@ -349,13 +349,13 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "setupRx()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "executeSearch()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "ECFC3B55-F980-4565-BD7B-51A5EAB5933E - 318de06f81121aba"
+                  uuid = "ECFC3B55-F980-4565-BD7B-51A5EAB5933E - 318de06f8112193e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -365,12 +365,12 @@
                   urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
                   offsetFromSymbolStart = "235">
                </Location>
                <Location
-                  uuid = "ECFC3B55-F980-4565-BD7B-51A5EAB5933E - bbba648403b319e4"
+                  uuid = "ECFC3B55-F980-4565-BD7B-51A5EAB5933E - bbba648403b31a60"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -380,8 +380,8 @@
                   urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
                   offsetFromSymbolStart = "42">
                </Location>
             </Locations>
@@ -397,9 +397,9 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "setupRx()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "executeSearch()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -470,38 +470,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12A00D7F-F7C9-40CB-9A0B-088F7DC36E8F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "executeSearch()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E16335C-A85A-4277-B46D-BF022322EAAC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "executeSearch()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "52ADEDD4-2027-4B70-88F0-FE0F18E914C0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -513,6 +481,38 @@
             endingLineNumber = "27"
             landmarkName = "executeSearch()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52ADEDD4-2027-4B70-88F0-FE0F18E914C0 - d24be0e3bf6ddc43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in Ios_Demonstrations):__C.AdvancedSearchViewController.executeSearch() -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "773">
+               </Location>
+               <Location
+                  uuid = "52ADEDD4-2027-4B70-88F0-FE0F18E914C0 - 512d8015f2807418"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Ios_Demonstrations.FoodQueryResult) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Ios_Demonstrations.SimpleRecipe&gt;&gt; in (extension in Ios_Demonstrations):__C.AdvancedSearchViewController.executeSearch() -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -550,49 +550,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7FD1627B-4F06-4549-AA11-83E164D82716"
-            shouldBeEnabled = "No"
+            uuid = "277D4F68-8C25-4D30-B0B4-B8A2E71B2361"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ios Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "executeSearch()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7FD1627B-4F06-4549-AA11-83E164D82716 - d24be0e3bf6ddc20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in Ios_Demonstrations):__C.AdvancedSearchViewController.executeSearch() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "1686">
-               </Location>
-               <Location
-                  uuid = "7FD1627B-4F06-4549-AA11-83E164D82716 - 512d8015f2807439"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Ios_Demonstrations.FoodQueryResult) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Ios_Demonstrations.SimpleRecipe&gt;&gt; in (extension in Ios_Demonstrations):__C.AdvancedSearchViewController.executeSearch() -&gt; ()"
-                  moduleName = "Ios Demonstrations"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/FoodSearch/AdvanceSearchRxExtension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
