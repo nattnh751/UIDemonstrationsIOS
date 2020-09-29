@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Ios Demonstrations/Pods-Ios Demonstrations-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework

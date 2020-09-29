@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0834CFCE2523860900B8AE0C /* NathansServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */; };
 		08624D4F251942E70050F5FC /* BeerViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08624D4D251942E70050F5FC /* BeerViewer.swift */; };
 		08624D50251942E70050F5FC /* BeerViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D4E251942E70050F5FC /* BeerViewer.xib */; };
 		08624D5F251A47C90050F5FC /* AdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NathansServiceClass.swift; sourceTree = "<group>"; };
 		08624D4D251942E70050F5FC /* BeerViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewer.swift; sourceTree = "<group>"; };
 		08624D4E251942E70050F5FC /* BeerViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerViewer.xib; sourceTree = "<group>"; };
 		08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedSearchViewController.m; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				08862E02250D396400384212 /* AppDelegate.swift */,
+				0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */,
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
 				08624D82251BFD4C0050F5FC /* CircleGradient.swift */,
@@ -515,6 +518,7 @@
 				08862E3C250D3CFC00384212 /* UILabelX.swift in Sources */,
 				08AA0B572512804B0051775F /* Ingredient.swift in Sources */,
 				088AB29F251D11BF0013BC17 /* FoodQueryResult.swift in Sources */,
+				0834CFCE2523860900B8AE0C /* NathansServiceClass.swift in Sources */,
 				08AA0B552512804B0051775F /* Malt.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
 				08AA0B502512804B0051775F /* Hop.swift in Sources */,

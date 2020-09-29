@@ -21,14 +21,15 @@ extension AdvancedSearchViewController {
         .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
         .distinctUntilChanged()
   }
-  @objc func executeSearch() {
+  
+  func executeSearch() {
     let provider: MoyaProvider<FoodSearch> = MoyaProvider<FoodSearch>()
     let disposeBag = DisposeBag()
     let foods = provider.rx.request(FoodSearch.getFoodWithQuery("lasang")).map(to: FoodQueryResult.self).asObservable().subscribe { (result) in
       Observable.from(optional: result.results).bind(to: self.resultsCollectionView.rx.items) { (collectionView, row, element) in
         let indexPath = IndexPath(row: row, section: 0)
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "*", for:indexPath) as? SearchCollectionViewCell {
-          cell.titleView.text = element.title
+//          cell.titleView.text = element.title
           return cell
         } else {
           let fail = collectionView.dequeueReusableCell(withReuseIdentifier: "*", for: indexPath)
@@ -36,13 +37,9 @@ extension AdvancedSearchViewController {
         }
      }.disposed(by: disposeBag)
     }
-
-    
-    
-    
-
   }
-  @objc func setupRx() {
+  
+  func setupRx() {
     let disposeBag = DisposeBag()
     let provider: MoyaProvider<FoodSearch> = MoyaProvider<FoodSearch>()
     let foods = latestSearchText.observeOn(MainScheduler.instance).flatMapLatest { name -> Observable<FoodQueryResult> in

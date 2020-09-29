@@ -6,9 +6,10 @@ target 'Ios Demonstrations' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Moya-ModelMapper/RxSwift', '~> 11.0'
+  pod 'Moya-ModelMapper/RxSwift', '~> 10.0'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'RxOptional'
+  pod 'AFNetworking', '~> 4.0'
 end
 
 workspace 'Ios Demonstrations'

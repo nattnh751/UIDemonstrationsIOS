@@ -11,6 +11,7 @@ import UIKit
 class SearchCollectionViewCell: UICollectionViewCell {
 
   @IBOutlet weak var titleView: UILabel!
+  
   override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

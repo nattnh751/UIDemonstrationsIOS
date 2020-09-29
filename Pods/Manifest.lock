@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - Alamofire (5.2.2)
   - ModelMapper (10.0.1):
     - ModelMapper/Core (= 10.0.1)
@@ -28,6 +43,7 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - AFNetworking (~> 4.0)
   - Moya-ModelMapper/RxSwift (~> 10.0)
   - Moya/RxSwift (~> 14.0)
   - RxCocoa
@@ -36,6 +52,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - Alamofire
     - ModelMapper
     - Moya
@@ -46,6 +63,7 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -55,6 +73,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 8add872fca6c7035ea925047cf272f6ff1fb5d74
+PODFILE CHECKSUM: 57682ff760f6a85ddc51745412a057d14c79b99e
 
 COCOAPODS: 1.9.3

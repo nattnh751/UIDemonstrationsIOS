@@ -73,7 +73,6 @@
                      [self initializeSelectedTagCollectionView];
                      [self initializeResultsCollectionView];
                      [self initializeTagCollectionView];
-                     [self setupRx];
                    });
                  });
 }
@@ -81,6 +80,8 @@
   UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
   CGRect frame = self.collectionView.frame;
   resultsCollectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+  [resultsCollectionView setDelegate:self];
+  [resultsCollectionView setDataSource:self];
   [resultsCollectionView setHidden:NO];
   [resultsCollectionView setAlpha:0];
   [resultsCollectionView setBackgroundColor:[UIColor whiteColor]];
@@ -135,20 +136,26 @@
     typeof(self) __weak weakSelf = self;
     [UIView animateWithDuration:0.15f animations:^{
       weakSelf.resultsCollectionView.alpha = 1;
-      [clearButton setHidden:YES];
+      [self.clearButton setHidden:YES];
     }];
     [searchButton setSelected:YES];
   }
 }
 
 - (void)refreshSearchResults {
-  foodResultObjects = nil;
-  if(foodResultObjects.count<=0) {
-    [noResultsFound setHidden:NO];
-  } else {
-    [noResultsFound setHidden:YES];
-  }
-  [self executeSearch];
+  [NathansService.shared getRecipesWithQuery:self.searchBar.text returnBlock:^(NSURLSessionDataTask * task, id _Nullable responseObject) {
+//    DLog(responseObject);
+    NSDictionary *responseAsDict = responseObject;
+    NSArray *tempArray = [responseAsDict objectForKey:@"results"];
+    self.foodResultObjects = [tempArray mutableCopy];
+    if(self.foodResultObjects.count<=0) {
+      [noResultsFound setHidden:NO];
+    } else {
+      [noResultsFound setHidden:YES];
+    }
+    [resultsCollectionView reloadData];
+//    [self executeSearch];
+  }];
   
 }
 
@@ -181,7 +188,7 @@
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*) layout;
     BOOL horizontal = (resultsCollectionView.bounds.size.width > resultsCollectionView.bounds.size.height + 100);
 //    CGSize cellSize  = [MediaItemCell getSizeForCell:flowLayout isHorizontal:horizontal gridObjects:self.foodResultObjects collectionView:resultsCollectionView index:indexPath splitMode:NO];
-    return CGSizeMake(10.0f, 100.0f);
+    return CGSizeMake(100.0f, 100.0f);
   }
   return CGSizeMake(10.0f, 10.0f);
 
@@ -248,28 +255,13 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)theCollectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-//  if(theCollectionView==resultsCollectionView) {
-////    Media *m = [self.foodResultObjects objectAtIndex:indexPath.item];
-////    UIColor *color = [UIColor colorWithHexString:@"222222"];
-////    Session *session = [AppDataRoomService sharedInstance].session;
-////    clientFont = session.selectedAccount.clientFont;
-////    boldClientFont = session.selectedAccount.boldClientFont;
-////    italicClientFont = session.selectedAccount.italicClientFont;
-////    MediaItemCell *cell = (id)[theCollectionView dequeueReusableCellWithReuseIdentifier:@"*" forIndexPath:indexPath];
-////    [cell setMedia:m];
-////    [cell textLabel]; //force lazycreate
-////    [[cell textLabel] setText:m.title];
-////    [cell recursiveReplaceSystemFontWith:clientFont
-////                                    bold:boldClientFont
-////                                  italic:italicClientFont];
-////    UIButton *butt = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-////    UIImage *plus = [[UIImage imageNamed:@"button-plus.png"] imageWithTintBackgroundOnly:color];
-////    [butt setImage:plus forState:UIControlStateNormal];
-////    [butt addTarget:self action:@selector(doActionPopup:) forControlEvents:UIControlEventTouchUpInside];
-////    [cell setAccessoryView:butt];
-////    [self addWifiIconIfNeededToCell:cell forMedia:m];
-////    return cell;
-//  } else {
+  if(theCollectionView==resultsCollectionView) {
+    NSDictionary *m = [self.foodResultObjects objectAtIndex:indexPath.item];
+    SearchCollectionViewCell *cell = (id)[theCollectionView dequeueReusableCellWithReuseIdentifier:@"*" forIndexPath:indexPath];
+    [[cell titleView] setText:[m objectForKey:@"title"]];
+    [cell.titleView setTextColor:[UIColor blackColor]];
+    return cell;
+  } else {
     NSArray *testArray;
     BOOL isSelectedView = theCollectionView==selectedTagCollection;
     if(isSelectedView) {
@@ -298,7 +290,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
       cell.layer.cornerRadius = (CGFloat) (14);
     }
     return cell;
-//  }
+  }
 }
 - (UITextView *)getLabelView:(SearchTag *)tag showDelete:(BOOL)showDelete {
   UITextView *textLabel = [UITextView new];

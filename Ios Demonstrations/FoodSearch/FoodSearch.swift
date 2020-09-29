@@ -30,7 +30,7 @@ extension FoodSearch: TargetType {
           var params: [String: Any] = [:]
           params["query"] = query
           params["apiKey"] = API_KEY
-          params["addRecipeInformation"] = "true"
+//          params["addRecipeInformation"] = "true"
           return .requestParameters(parameters: params, encoding: URLEncoding.default)
         default:
             return .requestPlain

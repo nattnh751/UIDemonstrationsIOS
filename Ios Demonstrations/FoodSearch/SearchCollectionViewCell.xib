@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,9 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="161"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-U1-VGS">
-                        <rect key="frame" x="20" y="63" width="328" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-U1-VGS">
+                        <rect key="frame" x="0.0" y="63" width="368" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -27,12 +27,23 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemRedColor"/>
+            <constraints>
+                <constraint firstItem="Ydk-U1-VGS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" symbolic="YES" id="00t-dD-D7q"/>
+                <constraint firstItem="Ydk-U1-VGS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="63" id="Mv8-ub-Zty"/>
+                <constraint firstAttribute="trailing" secondItem="Ydk-U1-VGS" secondAttribute="trailing" symbolic="YES" id="bOn-WP-5mO"/>
+                <constraint firstAttribute="bottom" secondItem="Ydk-U1-VGS" secondAttribute="bottom" constant="67" id="p9I-7G-ZMN"/>
+            </constraints>
             <size key="customSize" width="368" height="161"/>
             <connections>
-                <outlet property="titleView" destination="Ydk-U1-VGS" id="GHx-bJ-yPk"/>
+                <outlet property="titleView" destination="Ydk-U1-VGS" id="jJ3-OS-QWb"/>
             </connections>
             <point key="canvasLocation" x="371.01449275362324" y="190.51339285714286"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
