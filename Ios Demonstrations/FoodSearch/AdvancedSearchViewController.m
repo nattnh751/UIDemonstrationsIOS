@@ -85,7 +85,8 @@
   [resultsCollectionView setHidden:NO];
   [resultsCollectionView setAlpha:0];
   [resultsCollectionView setBackgroundColor:[UIColor whiteColor]];
-  [resultsCollectionView registerClass:[SearchCollectionViewCell class] forCellWithReuseIdentifier:@"*"];
+  UINib *resultsNib = [UINib nibWithNibName:@"SearchCollectionViewCell" bundle: nil];
+  [resultsCollectionView registerNib:resultsNib forCellWithReuseIdentifier:@"*"];
   [resultsCollectionView setFrame:frame];
   noResultsFound = [UITextView new];
   noResultsFound.text = @"Search results empty";
