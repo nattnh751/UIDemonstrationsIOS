@@ -14,7 +14,7 @@ import AVFoundation
   @objc static let shared = NathansService()
   let operationManager =  AFHTTPSessionManager()
   let API_KEY = "e168d3304469432dacc33cdd825aed1e"
-
+  let CAT_API_KEY = "d51fe67b-2b3d-4bbf-a2f1-38bd1bf1702e"
   override init(){}
   
   @objc func getRecipes( query : String, returnBlock: @escaping ((URLSessionDataTask, Any?) -> Void)) {
