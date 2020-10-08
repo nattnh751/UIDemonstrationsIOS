@@ -145,7 +145,6 @@
 
 - (void)refreshSearchResults {
   [NathansService.shared getRecipesWithQuery:self.searchBar.text returnBlock:^(NSURLSessionDataTask * task, id _Nullable responseObject) {
-//    DLog(responseObject);
     NSDictionary *responseAsDict = responseObject;
     NSArray *tempArray = [responseAsDict objectForKey:@"results"];
     self.foodResultObjects = [tempArray mutableCopy];
@@ -155,7 +154,6 @@
       [noResultsFound setHidden:YES];
     }
     [resultsCollectionView reloadData];
-//    [self executeSearch];
   }];
   
 }
@@ -189,7 +187,7 @@
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*) layout;
     BOOL horizontal = (resultsCollectionView.bounds.size.width > resultsCollectionView.bounds.size.height + 100);
 //    CGSize cellSize  = [MediaItemCell getSizeForCell:flowLayout isHorizontal:horizontal gridObjects:self.foodResultObjects collectionView:resultsCollectionView index:indexPath splitMode:NO];
-    return CGSizeMake(100.0f, 100.0f);
+    return CGSizeMake((resultsCollectionView.frame.size.width-50)/3, 100.0f);
   }
   return CGSizeMake(10.0f, 10.0f);
 
@@ -259,8 +257,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
   if(theCollectionView==resultsCollectionView) {
     NSDictionary *m = [self.foodResultObjects objectAtIndex:indexPath.item];
     SearchCollectionViewCell *cell = (id)[theCollectionView dequeueReusableCellWithReuseIdentifier:@"*" forIndexPath:indexPath];
-    [[cell titleView] setText:[m objectForKey:@"title"]];
-    [cell.titleView setTextColor:[UIColor blackColor]];
+    [[cell name] setText:[m objectForKey:@"title"]];
+    [cell setImageWithUrl:[m objectForKey:@"image"]];
     return cell;
   } else {
     NSArray *testArray;

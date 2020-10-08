@@ -21,7 +21,8 @@ extension AdvancedSearchViewController {
         .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
         .distinctUntilChanged()
   }
-  
+
+
   func executeSearch() {
     let provider: MoyaProvider<FoodSearch> = MoyaProvider<FoodSearch>()
     let disposeBag = DisposeBag()
@@ -67,5 +68,5 @@ extension AdvancedSearchViewController {
       }
    }.disposed(by: disposeBag)
  }
-  
+
 }

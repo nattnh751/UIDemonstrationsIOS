@@ -11,17 +11,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="Ios_Demonstrations" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="368" height="161"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="Ios_Demonstrations" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="368" height="161"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-U1-VGS">
-                        <rect key="frame" x="0.0" y="63" width="368" height="31"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-Li-0zR">
+                        <rect key="frame" x="-20" y="-14" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4e-he-CPo">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -29,16 +33,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemRedColor"/>
             <constraints>
-                <constraint firstItem="Ydk-U1-VGS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" symbolic="YES" id="00t-dD-D7q"/>
-                <constraint firstItem="Ydk-U1-VGS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="63" id="Mv8-ub-Zty"/>
-                <constraint firstAttribute="trailing" secondItem="Ydk-U1-VGS" secondAttribute="trailing" symbolic="YES" id="bOn-WP-5mO"/>
-                <constraint firstAttribute="bottom" secondItem="Ydk-U1-VGS" secondAttribute="bottom" constant="67" id="p9I-7G-ZMN"/>
+                <constraint firstAttribute="trailing" secondItem="X4e-he-CPo" secondAttribute="trailing" id="8gc-dE-2UY"/>
+                <constraint firstItem="X4e-he-CPo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AaP-WA-M9Z"/>
+                <constraint firstItem="X4e-he-CPo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dbu-I7-Eh6"/>
+                <constraint firstAttribute="bottom" secondItem="X4e-he-CPo" secondAttribute="bottom" id="eVe-pA-Ley"/>
             </constraints>
             <size key="customSize" width="368" height="161"/>
             <connections>
-                <outlet property="titleView" destination="Ydk-U1-VGS" id="jJ3-OS-QWb"/>
+                <outlet property="image" destination="HbB-Li-0zR" id="JH0-Lx-Gsm"/>
+                <outlet property="name" destination="X4e-he-CPo" id="NKm-77-vhJ"/>
             </connections>
-            <point key="canvasLocation" x="371.01449275362324" y="190.51339285714286"/>
+            <point key="canvasLocation" x="371.01449275362324" y="190.17857142857142"/>
         </collectionViewCell>
     </objects>
     <resources>

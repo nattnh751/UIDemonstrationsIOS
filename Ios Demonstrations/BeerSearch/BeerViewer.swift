@@ -27,7 +27,7 @@ class BeerViewer: UIViewController {
     if let beerMe =  self.beer {
       self.beerName.text = beerMe.name
       let fileUrl = URL(string: beerMe.imageUrl ?? "")!
-      self.beerImage.load(url:fileUrl)
+      self.beerImage.load(url:fileUrl, blur: false)
       self.beerDescription.text = beerMe.descriptionField ?? ""
     }
   }
@@ -49,14 +49,28 @@ class BeerViewer: UIViewController {
 
 }
 extension UIImageView {
-    func load(url: URL) {
+  func load(url: URL, blur: Bool) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
+              if let image = UIImage(data: data) {
+                  if(blur) {
+                    if let blurredImage = image.blur(7.0) {
+                      DispatchQueue.main.async {
+                          self?.image = blurredImage
+                      }
+                    } else {
+                      print("fail")
+                    }
+                  } else {
                     DispatchQueue.main.async {
                         self?.image = image
                     }
+                  }
+                } else {
+                  print("fail")
                 }
+            } else {
+              print("fail")
             }
         }
     }
