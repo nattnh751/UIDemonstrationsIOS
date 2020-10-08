@@ -46,18 +46,30 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions on How to brew beer (coming soon)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-6G-r9L">
+                    <rect key="frame" x="49" y="780" width="316" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="npG-Ma-NB0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="NOK-jT-slr" firstAttribute="top" secondItem="Zf6-w2-J0T" secondAttribute="bottom" constant="8" symbolic="YES" id="0Iw-Tg-76O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fiv-6G-r9L" secondAttribute="bottom" constant="41" id="3X3-Xn-QKX"/>
                 <constraint firstItem="4vw-pj-bFb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5iu-qK-mUr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zf6-w2-J0T" secondAttribute="trailing" constant="20" id="BlL-DD-SL6"/>
                 <constraint firstItem="4vw-pj-bFb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="GuF-DU-7OI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4vw-pj-bFb" secondAttribute="trailing" constant="20" id="Iln-bZ-kRQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fiv-6G-r9L" secondAttribute="trailing" constant="49" id="PTh-rm-6TO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NOK-jT-slr" secondAttribute="trailing" constant="20" id="PWb-y6-KdN"/>
                 <constraint firstItem="Zf6-w2-J0T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QNk-kD-SSo"/>
                 <constraint firstItem="NOK-jT-slr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Y6A-RS-SF9"/>
+                <constraint firstItem="Fiv-6G-r9L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="aJl-OM-baP"/>
                 <constraint firstItem="Zf6-w2-J0T" firstAttribute="top" secondItem="4vw-pj-bFb" secondAttribute="bottom" constant="8" symbolic="YES" id="lFc-ZG-wRf"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="148.66071428571428"/>
