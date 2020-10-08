@@ -46,19 +46,21 @@ public class SeachVC: UIViewController {
                                      return cell
                                  }
        .disposed(by: self.disposeBag)
-     tableView
-         .rx.itemSelected
-         .subscribe(onNext: { indexPath in
-          beers.subscribe(onNext: { beers in
-            let thisBeer = beers[indexPath.row]
-            let beervc = BeerViewer(beer: thisBeer)
-            self.present(beervc, animated: true) {
-              if self.searchBar.isFirstResponder == true {
-                  self.view.endEditing(true)
+
+    tableView.rx.modelSelected(Beer.self)
+        .subscribe { (event) in
+            switch event {
+            case .next(let selected):
+              let beervc = BeerViewer(beer: selected)
+              self.present(beervc, animated: true) {
+                if self.searchBar.isFirstResponder == true {
+                    self.view.endEditing(true)
+                }
               }
+            default:
+                break
             }
-          })
-         })
-      .disposed(by: disposeBag)
+        }
+        .disposed(by: disposeBag)
   }
 }
