@@ -54,7 +54,7 @@ extension UIImageView {
             if let data = try? Data(contentsOf: url) {
               if let image = UIImage(data: data) {
                   if(blur) {
-                    if let blurredImage = image.blur(6.5) {
+                    if let blurredImage = image.blur(7.5) {
                       DispatchQueue.main.async {
                           self?.image = blurredImage
                       }

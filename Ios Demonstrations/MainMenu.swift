@@ -22,9 +22,13 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     let objects = NSMutableArray()
     objects.add(WheelItem(title: "Search Demo", itemId: 1))
     objects.add(WheelItem(title: "RX Brew Me Search", itemId: 2))
-    objects.add(WheelItem(title: "Nested Categories", itemId: 3))
-    objects.add(WheelItem(title: "Twiddle Down Screen", itemId: 4))
-    objects.add(WheelItem(title: "Web Bundle Demo", itemId: 5))
+    objects.add(WheelItem(title: "My Linked In", itemId: 3))
+    objects.add(WheelItem(title: "Open this project on Git", itemId: 4))
+    objects.add(WheelItem(title: "Cat Tinder", itemId: 4))
+
+    //    objects.add(WheelItem(title: "Nested Categories", itemId: 3))
+//    objects.add(WheelItem(title: "Twiddle Down Screen", itemId: 4))
+//    objects.add(WheelItem(title: "Web Bundle Demo", itemId: 5))
     objects.add(WheelItem(title: "Something else", itemId: 6))
     self.wheel = KCRotaryWheel(frame: frame, sectionsNumber: 6, categories: objects)
     self.background = circleView()
@@ -41,8 +45,10 @@ class MainMenu: UIViewController, KCRotaryProtocol {
         self.present(searchVc, animated: true, completion: nil)
       case 3:
         print(itemId)
+        // open my linked in in the app
       case 4:
         print(itemId)
+        // open the github for this project
       case 5:
         print(itemId)
       case 6:
