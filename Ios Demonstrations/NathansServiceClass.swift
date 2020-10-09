@@ -17,15 +17,26 @@ import AVFoundation
   let CAT_API_KEY = "d51fe67b-2b3d-4bbf-a2f1-38bd1bf1702e"
   override init(){}
   
-  @objc func getRecipes( query : String, returnBlock: @escaping ((URLSessionDataTask, Any?) -> Void)) {
+  @objc func getRecipes( query : String, cusines : [String]?, diets :[String]?, intolerances : [String]?, returnBlock: @escaping ((URLSessionDataTask, Any?) -> Void)) {
     var params: [String: Any] = [:]
     params["query"] = query
+    if(cusines != nil && cusines!.count > 0) {
+      params["cuisine"] = cusines!.map{$0}.joined(separator: ",")
+    }
+    if(diets != nil && diets!.count > 0) {
+      params["diet"] = diets!.map{$0}.joined(separator: ",")
+    }
+    if(intolerances != nil && intolerances!.count > 0) {
+      params["intolerances"] = intolerances!.map{$0}.joined(separator: ",")
+    }
     params["apiKey"] = API_KEY
     params["addRecipeInformation"] = "true"
 
     operationManager.get("https://api.spoonacular.com/recipes/complexSearch", parameters: params, headers: nil, progress: nil, success:returnBlock) { task, error in
       print(error)
     }
-
+  }
+  @objc func getRecipes( query : String, returnBlock: @escaping ((URLSessionDataTask, Any?) -> Void)) {
+    self.getRecipes(query: query, cusines: nil, diets: nil, intolerances: nil, returnBlock: returnBlock)
   }
 }

@@ -144,7 +144,21 @@
 }
 
 - (void)refreshSearchResults {
-  [NathansService.shared getRecipesWithQuery:self.searchBar.text returnBlock:^(NSURLSessionDataTask * task, id _Nullable responseObject) {
+  NSMutableArray *selectedCuisines = [NSMutableArray new];
+  NSMutableArray *selectedDiets = [NSMutableArray new];
+  NSMutableArray *selectedIntolerances = [NSMutableArray new];
+  for(SearchTag *tag in selectedTags) {
+    if([tag.type isEqualToString:@"Diet Type"]) {
+      [selectedDiets addObject:tag.name];
+    }
+    if([tag.type isEqualToString:@"Cusinse"]) {
+      [selectedCuisines addObject:tag.name];
+    }
+    if([tag.type isEqualToString:@"Intolerance"]) {
+      [selectedIntolerances addObject:tag.name];
+    }
+  }
+  [NathansService.shared getRecipesWithQuery:self.searchBar.text cusines:selectedCuisines diets:selectedDiets intolerances:selectedIntolerances returnBlock:^(NSURLSessionDataTask * task, id _Nullable responseObject) {
     NSDictionary *responseAsDict = responseObject;
     NSArray *tempArray = [responseAsDict objectForKey:@"results"];
     self.foodResultObjects = [tempArray mutableCopy];

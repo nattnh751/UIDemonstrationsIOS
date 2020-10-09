@@ -110,8 +110,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
             <Locations>
@@ -493,8 +493,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "-collectionView:layout:sizeForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -509,9 +509,9 @@
             filePath = "Ios Demonstrations/NathansServiceClass.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getRecipes(query:returnBlock:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getRecipes(query:cusines:diets:intolerances:returnBlock:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -525,8 +525,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-refreshSearchResults"
             landmarkType = "7">
          </BreakpointContent>
@@ -541,8 +541,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "-refreshSearchResults"
             landmarkType = "7">
          </BreakpointContent>
@@ -557,8 +557,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -573,8 +573,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -797,8 +797,8 @@
             filePath = "Ios Demonstrations/FoodSearch/AdvancedSearchViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -813,10 +813,154 @@
             filePath = "Ios Demonstrations/NathansServiceClass.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getRecipes(query:cusines:diets:intolerances:returnBlock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B89F588E-EF21-4719-86E9-73F00E9A4157"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ios Demonstrations/NathansServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getRecipes(query:cusines:diets:intolerances:returnBlock:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B89F588E-EF21-4719-86E9-73F00E9A4157 - ec35a5fb8276d32f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "B89F588E-EF21-4719-86E9-73F00E9A4157 - 58d18185abcbe742"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; Swift.String in Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F819E634-A330-424F-BB3E-B8F3E7286A35"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ios Demonstrations/NathansServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "getRecipes(query:returnBlock:)"
+            landmarkName = "getRecipes(query:cusines:diets:intolerances:returnBlock:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F819E634-A330-424F-BB3E-B8F3E7286A35 - ec35a5fb8276d38c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1975">
+               </Location>
+               <Location
+                  uuid = "F819E634-A330-424F-BB3E-B8F3E7286A35 - b792b04ef5135de2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.String in Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4396E87-D0B8-46A0-8339-F9EE40E57064"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ios Demonstrations/NathansServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getRecipes(query:cusines:diets:intolerances:returnBlock:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4396E87-D0B8-46A0-8339-F9EE40E57064 - ec35a5fb8276d3e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "3090">
+               </Location>
+               <Location
+                  uuid = "F4396E87-D0B8-46A0-8339-F9EE40E57064 - 657a0f7c65a0b86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.String) -&gt; Swift.String in Ios_Demonstrations.NathansService.getRecipes(query: Swift.String, cusines: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, diets: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, intolerances: Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, returnBlock: (__C.NSURLSessionDataTask, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ios Demonstrations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanwalsh/UIDemonstrationsIOS/Ios%20Demonstrations/NathansServiceClass.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
