@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0834CFCE2523860900B8AE0C /* NathansServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */; };
+		085EAF7F2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EAF7C2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift */; };
+		085EAF802530FA810063D848 /* BasicDevConsoleWebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EAF7D2530FA810063D848 /* BasicDevConsoleWebViewer.swift */; };
+		085EAF812530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EAF7E2530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift */; };
 		08624D4F251942E70050F5FC /* BeerViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08624D4D251942E70050F5FC /* BeerViewer.swift */; };
 		08624D50251942E70050F5FC /* BeerViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08624D4E251942E70050F5FC /* BeerViewer.xib */; };
 		08624D5F251A47C90050F5FC /* AdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */; };
@@ -74,6 +77,9 @@
 
 /* Begin PBXFileReference section */
 		0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NathansServiceClass.swift; sourceTree = "<group>"; };
+		085EAF7C2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicDevConsoleWebViewer+MarshallMethods.swift"; sourceTree = "<group>"; };
+		085EAF7D2530FA810063D848 /* BasicDevConsoleWebViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDevConsoleWebViewer.swift; sourceTree = "<group>"; };
+		085EAF7E2530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicDevConsoleWebViewer+WebBundleLoading.swift"; sourceTree = "<group>"; };
 		08624D4D251942E70050F5FC /* BeerViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewer.swift; sourceTree = "<group>"; };
 		08624D4E251942E70050F5FC /* BeerViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerViewer.xib; sourceTree = "<group>"; };
 		08624D59251A47C90050F5FC /* AdvancedSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedSearchViewController.m; sourceTree = "<group>"; };
@@ -177,6 +183,16 @@
 			path = BeerSearch;
 			sourceTree = "<group>";
 		};
+		085EAF7B2530FA810063D848 /* WebViewerWithDevTools */ = {
+			isa = PBXGroup;
+			children = (
+				085EAF7C2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift */,
+				085EAF7D2530FA810063D848 /* BasicDevConsoleWebViewer.swift */,
+				085EAF7E2530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift */,
+			);
+			path = WebViewerWithDevTools;
+			sourceTree = "<group>";
+		};
 		08624D58251A47C90050F5FC /* FoodSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +247,7 @@
 				08862E04250D396400384212 /* SceneDelegate.swift */,
 				08862E06250D396400384212 /* MainMenu.swift */,
 				08624D82251BFD4C0050F5FC /* CircleGradient.swift */,
+				085EAF7B2530FA810063D848 /* WebViewerWithDevTools */,
 				08624D58251A47C90050F5FC /* FoodSearch */,
 				08862E08250D396400384212 /* Settings.swift */,
 				083736C8251002DF0057C87E /* BeerSearch */,
@@ -521,7 +538,10 @@
 				0834CFCE2523860900B8AE0C /* NathansServiceClass.swift in Sources */,
 				08AA0B552512804B0051775F /* Malt.swift in Sources */,
 				08862E3D250D3CFC00384212 /* CurvedLabel.m in Sources */,
+				085EAF7F2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift in Sources */,
+				085EAF812530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift in Sources */,
 				08AA0B502512804B0051775F /* Hop.swift in Sources */,
+				085EAF802530FA810063D848 /* BasicDevConsoleWebViewer.swift in Sources */,
 				088AB2AA251D16A10013BC17 /* SearchCollectionViewCell.swift in Sources */,
 				08624D5F251A47C90050F5FC /* AdvancedSearchViewController.m in Sources */,
 				08624D6A251A48230050F5FC /* mediaTagCell.m in Sources */,

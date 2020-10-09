@@ -24,12 +24,13 @@ class MainMenu: UIViewController, KCRotaryProtocol {
     objects.add(WheelItem(title: "RX Brew Me Search", itemId: 2))
     objects.add(WheelItem(title: "My Linked In", itemId: 3))
     objects.add(WheelItem(title: "Open this project on Git", itemId: 4))
-    objects.add(WheelItem(title: "Cat Tinder", itemId: 4))
+    objects.add(WheelItem(title: "My Stack Overflow", itemId: 5))
 
     //    objects.add(WheelItem(title: "Nested Categories", itemId: 3))
-//    objects.add(WheelItem(title: "Twiddle Down Screen", itemId: 4))
-//    objects.add(WheelItem(title: "Web Bundle Demo", itemId: 5))
-    objects.add(WheelItem(title: "Something else", itemId: 6))
+    //    objects.add(WheelItem(title: "Cat Tinder", itemId: 3))
+    //    objects.add(WheelItem(title: "Twiddle Down Screen", itemId: 4))
+    objects.add(WheelItem(title: "Web Bundle Demo", itemId: 6))
+//    objects.add(WheelItem(title: "Something else", itemId: 6))
     self.wheel = KCRotaryWheel(frame: frame, sectionsNumber: 6, categories: objects)
     self.background = circleView()
     super.init(coder: aDecoder)
@@ -41,24 +42,36 @@ class MainMenu: UIViewController, KCRotaryProtocol {
         let searchVc = AdvancedSearchViewController(nibName: "AdvancedSearchViewController", bundle: nil)
         self.present(searchVc, animated: true, completion: nil)
       case 2:
-        let searchVc = SeachVC(nibName: "SeachVC", bundle: nil)
-        self.present(searchVc, animated: true, completion: nil)
+        let beerSearch = SeachVC(nibName: "SeachVC", bundle: nil)
+        self.present(beerSearch, animated: true, completion: nil)
       case 3:
         print(itemId)
-        // open my linked in in the app
+        self.showFullScreenBasicWebView("https://www.linkedin.com/in/nathaniel-walsh-087164120/",showDevTools: false)
       case 4:
         print(itemId)
-        // open the github for this project
+        self.showFullScreenBasicWebView("https://github.com/nattnh751/UIDemonstrationsIOS",showDevTools: false)
       case 5:
         print(itemId)
+        self.showFullScreenBasicWebView("https://stackoverflow.com/users/14355842/nathan-walsh",showDevTools: false)
       case 6:
         print(itemId)
+        self.showFullScreenBasicWebView("https://github.com/nattnh751/UIDemonstrationsIOS",showDevTools: true)
       default:
         print("itemId")
       }
     }
   }
   
+  func showFullScreenBasicWebView(_ url : String,showDevTools : Bool) {
+    let webViewer = BasicDevConsoleWebViewer()
+    webViewer.urlToDisplay = url
+    webViewer.enableDevTools = showDevTools
+    let holder = UINavigationController(rootViewController: webViewer)
+    holder.navigationBar.barStyle = .black
+    holder.modalPresentationStyle = .fullScreen
+    self.present(holder, animated: true, completion: nil)
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.refreshWheel()

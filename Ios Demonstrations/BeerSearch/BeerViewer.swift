@@ -26,8 +26,10 @@ class BeerViewer: UIViewController {
     super.viewDidLoad()
     if let beerMe =  self.beer {
       self.beerName.text = beerMe.name
-      let fileUrl = URL(string: beerMe.imageUrl ?? "")!
-      self.beerImage.load(url:fileUrl, blur: false)
+      if let imageUrl = beerMe.imageUrl {
+        let fileUrl = URL(string: imageUrl)!
+        self.beerImage.load(url:fileUrl, blur: false)
+      }
       self.beerDescription.text = beerMe.descriptionField ?? ""
     }
   }
