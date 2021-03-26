@@ -77,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		0834CFCD2523860900B8AE0C /* NathansServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NathansServiceClass.swift; sourceTree = "<group>"; };
+		0851B41C260D55DE00F8D48F /* ExampleDateFormatter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExampleDateFormatter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		085EAF7C2530FA810063D848 /* BasicDevConsoleWebViewer+MarshallMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicDevConsoleWebViewer+MarshallMethods.swift"; sourceTree = "<group>"; };
 		085EAF7D2530FA810063D848 /* BasicDevConsoleWebViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDevConsoleWebViewer.swift; sourceTree = "<group>"; };
 		085EAF7E2530FA810063D848 /* BasicDevConsoleWebViewer+WebBundleLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicDevConsoleWebViewer+WebBundleLoading.swift"; sourceTree = "<group>"; };
@@ -183,6 +184,14 @@
 			path = BeerSearch;
 			sourceTree = "<group>";
 		};
+		0851B403260D541000F8D48F /* DateFormating */ = {
+			isa = PBXGroup;
+			children = (
+				0851B41C260D55DE00F8D48F /* ExampleDateFormatter.playground */,
+			);
+			path = DateFormating;
+			sourceTree = "<group>";
+		};
 		085EAF7B2530FA810063D848 /* WebViewerWithDevTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +259,7 @@
 				085EAF7B2530FA810063D848 /* WebViewerWithDevTools */,
 				08624D58251A47C90050F5FC /* FoodSearch */,
 				08862E08250D396400384212 /* Settings.swift */,
+				0851B403260D541000F8D48F /* DateFormating */,
 				083736C8251002DF0057C87E /* BeerSearch */,
 				08862E42250D41CF00384212 /* Resources */,
 				08862E37250D3CFC00384212 /* Wheel */,
