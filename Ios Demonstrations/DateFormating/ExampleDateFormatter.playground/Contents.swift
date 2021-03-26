@@ -24,12 +24,12 @@ struct Articles : Codable {
   struct Article : Codable {
     var id : Int
     var title : String
-    var created_at : CustomDecodeableDate<DefaultDateFormatter>
+    var createdAt : CustomDecodeableDate<DefaultDateFormatter>
     var source : String
     var description : String
     var favorite : Bool
-    var hero_image : String
-    var link : String
+    var heroImage : URL
+    var link : URL
   }
   var articles : [Article]
 }
@@ -37,10 +37,10 @@ struct Articles : Codable {
 if let path = Bundle.main.path(forResource: "articles", ofType: "json") {
   let jsonData = Data(contentsOf: URL(fileURLWithPath: path))
   let decoder = JSONDecoder()
-  
-  let object = try JSONDecoder().decode(Articles.self, from: jsonData)
+  decoder.keyDecodingStrategy = .convertFromSnakeCase
+  let object = try decoder.decode(Articles.self, from: jsonData)
   for art in object.articles {
-    print(art.created_at)
+    print(art.createdAt)
   }
 }
 
