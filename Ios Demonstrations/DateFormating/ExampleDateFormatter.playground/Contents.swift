@@ -9,17 +9,7 @@ class DefaultDateFormatter: StaticDateFormatterInterface {
         return dateFormatter
     }()
 }
- 
-struct Article : Decodable {
-  var id : Int
-  var title : String
-  var createdAt : CustomDecodeableDate<DefaultDateFormatter>
-  var source : String
-  var description : String
-  var favorite : Bool
-  var heroImage : String
-  var link : String
-}
+
 struct Articles : Codable {
   struct Article : Codable {
     var id : Int
