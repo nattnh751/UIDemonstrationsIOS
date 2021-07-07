@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="2" id="45"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="2" customClass="AppDelegate">
+            <connections>
+                <outlet property="agendaListMenu" destination="27" id="41"/>
+                <outlet property="followupComposer" destination="21" id="39"/>
+                <outlet property="mainTabs" destination="4" id="33"/>
+                <outlet property="updates" destination="16" id="35"/>
+                <outlet property="window" destination="3" id="44"/>
+            </connections>
+        </customObject>
+        <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3" customClass="MBFingerTipWindow">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="127"/>
+        </window>
+        <tabBarController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="4" customClass="MainTabs">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" selectedItem="10" id="9" customClass="LanguageTabBar">
+                <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            </tabBar>
+            <viewControllers>
+                <navigationController id="8" customClass="ModusNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Main Menu title" image="tabBrowser.png" id="10" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Main Menu title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="11" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="SuperCombinedMenu" id="12" customClass="SuperCombinedMenu" customModule="AppDataRoom" customModuleProvider="target">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="13">
+                                <nil key="title"/>
+                            </navigationItem>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="5" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Agendas title" image="tabAgenda.png" id="25" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Agendas title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="26" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="CombinedHeaderMenu" id="27" customClass="AgendaListMenu">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="28">
+                                <nil key="title"/>
+                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="29">
+                                    <connections>
+                                        <action selector="doCreateAgenda:" destination="27" id="38"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                            <connections>
+                                <outlet property="addButton" destination="29" id="40"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="6" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Follow Up title" image="tabFollowup.png" id="19" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Follow Up title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="20" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="CombinedHeaderMenu" id="21" customClass="FollowupComposer">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="22">
+                                <nil key="title"/>
+                                <barButtonItem key="leftBarButtonItem" title="Clear button" id="23" customClass="LanguageBarButtonItem">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Clear button"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doClear:" destination="21" id="32"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem key="rightBarButtonItem" title="Send Followup button" style="done" id="24" customClass="LanguageBarButtonItem">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Send Followup button"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doSendingMenu:" destination="21" id="75"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                            <connections>
+                                <outlet property="clearButton" destination="23" id="46"/>
+                                <outlet property="emailButton" destination="24" id="43"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="67" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="WhatsNew title" image="tabWhatsNew.png" id="68" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="WhatsNew title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="69" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="CombinedHeaderMenu" id="70" customClass="WhatsNew">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="71">
+                                <nil key="title"/>
+                                <barButtonItem key="rightBarButtonItem" title="Clear New button" id="72" customClass="LanguageBarButtonItem">
+                                    <connections>
+                                        <action selector="doMarkAllAsSeen:" destination="70" id="74"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="55" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Library title" image="tabMediaLibrary.png" id="58" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Library title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="57" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="CombinedHeaderMenu" id="56" customClass="Library">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="59">
+                                <nil key="title"/>
+                            </navigationItem>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="rGw-l0-sFL" userLabel="Feedback title" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Feedback" image="polaris-feedback-icon-iOS.png" id="LDn-77-6Mb" userLabel="Feedback Title" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Feedback"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KfD-Ld-cUM" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96862745100000003" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="rPj-7a-yh5" userLabel="Feedback" customClass="Feedback">
+                            <navigationItem key="navigationItem" title="Item" id="sDU-bv-7dB" userLabel="Navigation Item"/>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="7" customClass="ADRNavigationController" customModule="AppDataRoom" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Settings title" image="tabSettings.png" id="14" customClass="LanguageTabBarItem">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Settings title"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="15" customClass="FlatNavBar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController nibName="Updates" id="16" customClass="Updates">
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" id="17">
+                                <nil key="title"/>
+                                <barButtonItem key="rightBarButtonItem" title="Log Out button" id="18" customClass="LanguageBarButtonItem">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="keyText" value="Log Out button"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doLogout:" destination="16" id="34"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                            <connections>
+                                <outlet property="logoutButton" destination="18" id="31"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+            </viewControllers>
+            <connections>
+                <outlet property="delegate" destination="9" id="nz7-Y3-usT"/>
+            </connections>
+            <point key="canvasLocation" x="460.15625" y="37.5"/>
+        </tabBarController>
+    </objects>
+    <designables>
+        <designable name="9">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="11">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="15">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="20">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="26">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="57">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="69">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+        <designable name="KfD-Ld-cUM">
+            <size key="intrinsicContentSize" width="-1" height="50"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="polaris-feedback-icon-iOS.png" width="36" height="31"/>
+        <image name="tabAgenda.png" width="21" height="29"/>
+        <image name="tabBrowser.png" width="25.5" height="29"/>
+        <image name="tabFollowup.png" width="31" height="29"/>
+        <image name="tabMediaLibrary.png" width="33" height="29"/>
+        <image name="tabSettings.png" width="29" height="29"/>
+        <image name="tabWhatsNew.png" width="30.5" height="30"/>
+    </resources>
+</document>
